@@ -1,0 +1,170 @@
+/* style for flulines.js */
+.no_chance_peakweek_forecast_data {
+    fill: #F0F0F0;
+}
+
+.negligible_chance_peakweek_forecast_data {
+    fill: #FFF7BC;
+}
+
+.low_chance_peakweek_forecast_data {
+    fill: #FEC44F;
+}
+
+.moderate_chance_peakweek_forecast_data {
+    fill: #FE9929;
+}
+
+.foreseeable_chance_peakweek_forecast_data {
+    fill: #EC7014;
+}
+
+.high_chance_peakweek_forecast_data {
+    fill: #993404;
+}
+
+.unknown_data {
+    fill: #ffffe5;
+}
+
+/*
+
+.no_chance_peakweek_forecast_data:hover {s
+    fill: #FFBA60;
+}
+
+.negligible_chance_peakweek_forecast_data:hover {
+    fill: #EA861E;
+}
+
+.low_chance_peakweek_forecast_data:hover {
+    fill: #398197;
+}
+
+.moderate_chance_peakweek_forecast_data:hover {
+    fill: #005B84;
+}
+
+.foreseeable_chance_peakweek_forecast_data:hover {
+    fill: #003462;
+}
+
+.unknown_data:hover {
+    fill: #ccc;
+}
+
+*/
+
+.awake_tooltip {
+    color: #fee391;
+}
+
+.restless_tooltip {
+    color: #fec44f;
+}
+
+.light_tooltip {
+    color: #fe9929;
+}
+
+.normal_tooltip {
+    color: #ec7014;
+}
+
+.rem_tooltip {
+    color: #cc4c02;
+}
+
+.deep_tooltip {
+    color: #993404;
+}
+
+.unknown_tooltip {
+    color: #ffffe5;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 10px;
+    padding-left: 0;
+    width: auto;
+    border: 0;
+    border-left: thin solid #000000;
+    pointer-events: none;
+    line-height: 12px;
+    padding-top: 0;
+    display: block;
+}
+
+.x_tick_emph {
+    font-weight: bold;
+}
+
+.ytitle {
+    /* y axis labels */
+    dominant-baseline: middle;
+    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 12px;
+}
+
+.ytitle.link {
+    /* y axis label with link */
+    cursor: pointer;
+    fill: #07C;
+}
+
+.axis path,
+.axis line {
+    display: none;
+}
+
+.axis text {
+    font-size: 12px;
+    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    fill: #777;
+}
+
+.vert_grid {
+    fill: none;
+    stroke: red;
+    stroke-width: 1px;
+}
+
+.vert_grid_emph {
+    fill: none;
+    stroke: #dddddd;
+    stroke-width: 2px;
+}
+
+.horz_grid {
+    fill: none;
+    stroke: #dddddd;
+    stroke-width: 1px;
+}
+
+.heading {
+    font-size: 16px;
+    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: bold;
+}
+
+.subheading {
+    font-size: 12px;
+    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    fill: #777;
+}
+
+.legend {
+    dominant-baseline: middle;
+    font-size: 12px;
+    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    fill: #777;
+}
