@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     <head itemscope itemtype="https://schema.org/WebSite">
     <title>U.S. Flu Season, Forecasted Peak Week (as of EW42)</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" type='text/css'>
@@ -92,7 +93,7 @@ footer {
 <body>
    <div class="ribbon"><span>2018-19</span></div>
 <div style="margin: 0 auto; width: 95%;padding: 10px" id="viziflu_container">
-    <h2><i class="fa fa-user-md"></i>&nbsp;When is flu season likely to peak in the United States?</h2>
+    <h3><i class="fa fa-user-md"></i>&nbsp;When is flu season likely to peak in the United States?</h3>
     <p id="example"></p>
 <script src="../vendors/moment/moment-with-locales.min.js" type="text/javascript"></script>
 <script>
@@ -106,8 +107,10 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/Hist-Avg",
     categories: {
+      "0.03% probability of flu peaking": { color: "#FFF7BC" },
       "0.14% probability of flu peaking": { color: "#FFF7BC" },
       "0.44% probability of flu peaking": { color: "#FFF7BC" },
+      "0% probability of flu peaking": { color: "#FFF7BC" },
       "1.97% probability of flu peaking": { color: "#FFF7BC" },
       "2.15% probability of flu peaking": { color: "#FFF7BC" },
       "2.51% probability of flu peaking": { color: "#FFF7BC" },
@@ -125,6 +128,11 @@ var dataset = [
       "9.12% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      [
+        "2018-09-29",
+        "Less than 0.001% probability of flu peaking",
+        "2018-10-06"
+      ],
       [
         "2018-10-06",
         "Less than 0.001% probability of flu peaking",
@@ -160,72 +168,31 @@ var dataset = [
         "Less than 0.001% probability of flu peaking",
         "2018-11-24"
       ],
-      [
-        "2018-11-24",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-01"
-      ],
-      [
-        "2018-12-01",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-08"
-      ],
-      ["2018-12-08", "0.14% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "2.51% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "10.37% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "10.39% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "2.93% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "1.97% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "3.50% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "9.12% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "15.96% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "17.64% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "12.16% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "4.36% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "2.68% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "3.48% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "2.15% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.44% probability of flu peaking", "2019-03-30"],
-      [
-        "2019-03-30",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-06"
-      ],
-      [
-        "2019-04-06",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-13"
-      ],
-      [
-        "2019-04-13",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-20"
-      ],
-      [
-        "2019-04-20",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-27"
-      ],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
-      [
-        "2019-05-04",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-11"
-      ],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
-      ]
+      ["2018-11-24", "0% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0.14% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "2.51% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "10.37% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "10.39% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "2.93% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1.97% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "3.50% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "9.12% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "15.96% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "17.64% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "12.16% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "4.36% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "2.68% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "3.48% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "2.15% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.44% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.03% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.03% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.03% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.03% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.03% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.03% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.03% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.03% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -233,6 +200,10 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/FluSightNetwork",
     categories: {
+      "0.02% probability of flu peaking": { color: "#FFF7BC" },
+      "0.03% probability of flu peaking": { color: "#FFF7BC" },
+      "0.06% probability of flu peaking": { color: "#FFF7BC" },
+      "0.09% probability of flu peaking": { color: "#FFF7BC" },
       "0.11% probability of flu peaking": { color: "#FFF7BC" },
       "0.19% probability of flu peaking": { color: "#FFF7BC" },
       "0.21% probability of flu peaking": { color: "#FFF7BC" },
@@ -251,7 +222,6 @@ var dataset = [
       "3.23% probability of flu peaking": { color: "#FFF7BC" },
       "3.44% probability of flu peaking": { color: "#FFF7BC" },
       "3.71% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "10.47% probability of flu peaking": { color: "#FEC44F" },
       "10.98% probability of flu peaking": { color: "#FEC44F" },
       "16.18% probability of flu peaking": { color: "#FEC44F" },
@@ -261,63 +231,39 @@ var dataset = [
       "9.48% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      [
-        "2018-10-06",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-13"
-      ],
-      [
-        "2018-10-13",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-20"
-      ],
-      [
-        "2018-10-20",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-27"
-      ],
-      ["2018-10-27", "1.90% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.21% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.23% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.42% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.83% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.84% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "1.21% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "3.23% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "5.19% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "18.78% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "3.71% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "2.33% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "5.14% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "9.48% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "16.18% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "10.47% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "10.98% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "3.44% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "1.29% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "1.14% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "0.72% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.83% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "0.19% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "0.44% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.26% probability of flu peaking", "2019-04-20"],
+      ["2018-09-29", "0.02% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.06% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.09% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "1.90% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.21% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.23% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.42% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.83% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.84% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "1.21% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "3.23% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "5.19% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "18.78% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "3.71% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "2.33% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "5.14% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "9.48% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "16.18% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "10.47% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "10.98% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "3.44% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.29% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "1.14% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0.72% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.83% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.19% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.44% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.26% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.11% probability of flu peaking", "2019-04-20"],
       ["2019-04-20", "0.11% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "0.11% probability of flu peaking", "2019-05-04"],
-      [
-        "2019-05-04",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-11"
-      ],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
-      ]
+      ["2019-04-27", "0.06% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.03% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.09% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -331,17 +277,18 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/BioFire%20FLI",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
-      "1.0% probability of flu peaking": { color: "#FFF7BC" },
-      "3.0% probability of flu peaking": { color: "#FFF7BC" },
-      "11.0% probability of flu peaking": { color: "#FEC44F" },
-      "12.0% probability of flu peaking": { color: "#FEC44F" },
-      "15.00% probability of flu peaking": { color: "#FEC44F" },
-      "17.0% probability of flu peaking": { color: "#FEC44F" },
-      "5.0% probability of flu peaking": { color: "#FEC44F" },
-      "8.0% probability of flu peaking": { color: "#FEC44F" },
-      "22.0% probability of flu peaking": { color: "#FE9929" }
+      "1% probability of flu peaking": { color: "#FFF7BC" },
+      "3% probability of flu peaking": { color: "#FFF7BC" },
+      "11% probability of flu peaking": { color: "#FEC44F" },
+      "12% probability of flu peaking": { color: "#FEC44F" },
+      "15% probability of flu peaking": { color: "#FEC44F" },
+      "17% probability of flu peaking": { color: "#FEC44F" },
+      "5% probability of flu peaking": { color: "#FEC44F" },
+      "8% probability of flu peaking": { color: "#FEC44F" },
+      "22% probability of flu peaking": { color: "#FE9929" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
@@ -357,16 +304,16 @@ var dataset = [
       ["2018-12-29", "0% probability of flu peaking", "2019-01-05"],
       ["2019-01-05", "0% probability of flu peaking", "2019-01-12"],
       ["2019-01-12", "0% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "0% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "3.0% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "8.0% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "12.0% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "15.00% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "22.0% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "17.0% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "11.0% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "5.0% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "1.0% probability of flu peaking", "2019-03-30"],
+      ["2019-01-19", "3% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "8% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "12% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "15% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "22% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "17% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "11% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "5% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "1% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
       ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
       ["2019-04-06", "0% probability of flu peaking", "2019-04-13"],
       ["2019-04-13", "0% probability of flu peaking", "2019-04-20"],
@@ -382,6 +329,7 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/CEID",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
+      "0.03% probability of flu peaking": { color: "#FFF7BC" },
       "0.14% probability of flu peaking": { color: "#FFF7BC" },
       "0.17% probability of flu peaking": { color: "#FFF7BC" },
       "0.30% probability of flu peaking": { color: "#FFF7BC" },
@@ -393,7 +341,7 @@ var dataset = [
       "0.61% probability of flu peaking": { color: "#FFF7BC" },
       "0.81% probability of flu peaking": { color: "#FFF7BC" },
       "1.01% probability of flu peaking": { color: "#FFF7BC" },
-      "1.3% probability of flu peaking": { color: "#FFF7BC" },
+      "1.25% probability of flu peaking": { color: "#FFF7BC" },
       "1.82% probability of flu peaking": { color: "#FFF7BC" },
       "2.36% probability of flu peaking": { color: "#FFF7BC" },
       "2.47% probability of flu peaking": { color: "#FFF7BC" },
@@ -402,55 +350,50 @@ var dataset = [
       "3.45% probability of flu peaking": { color: "#FFF7BC" },
       "3.55% probability of flu peaking": { color: "#FFF7BC" },
       "4.46% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "12.09% probability of flu peaking": { color: "#FEC44F" },
       "12.84% probability of flu peaking": { color: "#FEC44F" },
       "5.41% probability of flu peaking": { color: "#FEC44F" },
       "5.44% probability of flu peaking": { color: "#FEC44F" },
       "5.54% probability of flu peaking": { color: "#FEC44F" },
-      "6.3% probability of flu peaking": { color: "#FEC44F" },
+      "6.25% probability of flu peaking": { color: "#FEC44F" },
       "6.39% probability of flu peaking": { color: "#FEC44F" },
       "7.26% probability of flu peaking": { color: "#FEC44F" },
       "8.01% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
-      [
-        "2018-10-13",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-20"
-      ],
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.03% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.14% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.47% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.51% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.54% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "1.01% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "3.55% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "5.54% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "4.46% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "3.31% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "3.45% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "6.3% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "7.26% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "6.39% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "5.41% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "8.01% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "12.84% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "12.09% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "5.44% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "2.47% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "2.36% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "2.74% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "1.82% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "0.81% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.37% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0.30% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "0.61% probability of flu peaking", "2019-05-04"],
-      ["2019-05-04", "1.3% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.41% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0.17% probability of flu peaking", "2019-05-25"]
+      ["2018-10-27", "0.14% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.47% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.51% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.54% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "1.01% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "3.55% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "5.54% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "4.46% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "3.31% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "3.45% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "6.25% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "7.26% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "6.39% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "5.41% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "8.01% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "12.84% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "12.09% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "5.44% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "2.47% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "2.36% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "2.74% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "1.82% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.81% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.37% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.30% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.61% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "1.25% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.41% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.17% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -469,46 +412,46 @@ var dataset = [
       "3.48% probability of flu peaking": { color: "#FFF7BC" },
       "4.70% probability of flu peaking": { color: "#FFF7BC" },
       "13.69% probability of flu peaking": { color: "#FEC44F" },
-      "19.00% probability of flu peaking": { color: "#FEC44F" },
+      "19% probability of flu peaking": { color: "#FEC44F" },
       "5.93% probability of flu peaking": { color: "#FEC44F" },
       "7.56% probability of flu peaking": { color: "#FEC44F" },
       "8.38% probability of flu peaking": { color: "#FEC44F" },
       "8.79% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      ["2018-10-06", "0.12% probability of flu peaking", "2018-10-13"],
+      ["2018-09-29", "0.12% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "1.84% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "1.84% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "1.84% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0.62% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "1.03% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.21% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.62% probability of flu peaking", "2018-11-24"],
+      ["2018-10-20", "0.62% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "1.03% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.21% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.62% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "1.03% probability of flu peaking", "2018-11-24"],
       ["2018-11-24", "1.03% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "1.03% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "0.62% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "1.03% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "3.07% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "19.00% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "2.66% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "0.62% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "2.66% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "5.93% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "8.38% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "8.79% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "13.69% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "7.56% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "1.44% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "4.70% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "3.48% probability of flu peaking", "2019-03-23"],
+      ["2018-12-01", "0.62% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "1.03% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "3.07% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "19% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "2.66% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "0.62% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "2.66% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "5.93% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "8.38% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "8.79% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "13.69% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "7.56% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.44% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "4.70% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "3.48% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "1.03% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "1.03% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "1.03% probability of flu peaking", "2019-04-06"],
+      ["2019-03-30", "0.21% probability of flu peaking", "2019-04-06"],
       ["2019-04-06", "0.21% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.21% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0.62% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "0.21% probability of flu peaking", "2019-05-04"],
-      ["2019-05-04", "1.03% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.21% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "3.48% probability of flu peaking", "2019-05-25"]
+      ["2019-04-13", "0.62% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.21% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "1.03% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.21% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "3.48% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -516,6 +459,8 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/CU_Puffins",
     categories: {
+      "0.05% probability of flu peaking": { color: "#FFF7BC" },
+      "0.09% probability of flu peaking": { color: "#FFF7BC" },
       "0.12% probability of flu peaking": { color: "#FFF7BC" },
       "0.18% probability of flu peaking": { color: "#FFF7BC" },
       "0.23% probability of flu peaking": { color: "#FFF7BC" },
@@ -536,7 +481,6 @@ var dataset = [
       "3.62% probability of flu peaking": { color: "#FFF7BC" },
       "3.97% probability of flu peaking": { color: "#FFF7BC" },
       "4.33% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "6.36% probability of flu peaking": { color: "#FEC44F" },
       "6.47% probability of flu peaking": { color: "#FEC44F" },
       "6.99% probability of flu peaking": { color: "#FEC44F" },
@@ -547,47 +491,39 @@ var dataset = [
       "9.22% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      ["2018-09-29", "0.12% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0.12% probability of flu peaking", "2018-10-13"],
-      ["2018-10-13", "0.12% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "0.40% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0.18% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.32% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.26% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.53% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.92% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "1.38% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "1.95% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "2.88% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "4.33% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "8.73% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "6.47% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "6.99% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "8.05% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "8.95% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "9.22% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "8.67% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "8.73% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "6.36% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "3.97% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "3.62% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "2.52% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "1.37% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "0.91% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "0.44% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.26% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0.24% probability of flu peaking", "2019-04-27"],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
-      ["2019-05-04", "0.23% probability of flu peaking", "2019-05-11"],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      ["2019-05-18", "0.72% probability of flu peaking", "2019-05-25"]
+      ["2018-10-13", "0.40% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.18% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.32% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.26% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.53% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.92% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "1.38% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "1.95% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "2.88% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "4.33% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "8.73% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "6.47% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "6.99% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "8.05% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "8.95% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "9.22% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "8.67% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "8.73% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "6.36% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "3.97% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "3.62% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "2.52% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "1.37% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.91% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.44% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.26% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.24% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.09% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.23% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.05% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.72% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -606,46 +542,46 @@ var dataset = [
       "3.48% probability of flu peaking": { color: "#FFF7BC" },
       "4.70% probability of flu peaking": { color: "#FFF7BC" },
       "13.69% probability of flu peaking": { color: "#FEC44F" },
-      "19.00% probability of flu peaking": { color: "#FEC44F" },
+      "19% probability of flu peaking": { color: "#FEC44F" },
       "5.93% probability of flu peaking": { color: "#FEC44F" },
       "7.56% probability of flu peaking": { color: "#FEC44F" },
       "8.38% probability of flu peaking": { color: "#FEC44F" },
       "8.79% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      ["2018-10-06", "0.12% probability of flu peaking", "2018-10-13"],
+      ["2018-09-29", "0.12% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "1.84% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "1.84% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "1.84% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0.62% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "1.03% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.21% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.62% probability of flu peaking", "2018-11-24"],
+      ["2018-10-20", "0.62% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "1.03% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.21% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.62% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "1.03% probability of flu peaking", "2018-11-24"],
       ["2018-11-24", "1.03% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "1.03% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "0.62% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "1.03% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "3.07% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "19.00% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "2.66% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "0.62% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "2.66% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "5.93% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "8.38% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "8.79% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "13.69% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "7.56% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "1.44% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "4.70% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "3.48% probability of flu peaking", "2019-03-23"],
+      ["2018-12-01", "0.62% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "1.03% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "3.07% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "19% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "2.66% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "0.62% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "2.66% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "5.93% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "8.38% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "8.79% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "13.69% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "7.56% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.44% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "4.70% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "3.48% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "1.03% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "1.03% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "1.03% probability of flu peaking", "2019-04-06"],
+      ["2019-03-30", "0.21% probability of flu peaking", "2019-04-06"],
       ["2019-04-06", "0.21% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.21% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0.62% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "0.21% probability of flu peaking", "2019-05-04"],
-      ["2019-05-04", "1.03% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.21% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "3.48% probability of flu peaking", "2019-05-25"]
+      ["2019-04-13", "0.62% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.21% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "1.03% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.21% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "3.48% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -664,46 +600,46 @@ var dataset = [
       "3.48% probability of flu peaking": { color: "#FFF7BC" },
       "4.70% probability of flu peaking": { color: "#FFF7BC" },
       "13.69% probability of flu peaking": { color: "#FEC44F" },
-      "19.00% probability of flu peaking": { color: "#FEC44F" },
+      "19% probability of flu peaking": { color: "#FEC44F" },
       "5.93% probability of flu peaking": { color: "#FEC44F" },
       "7.56% probability of flu peaking": { color: "#FEC44F" },
       "8.38% probability of flu peaking": { color: "#FEC44F" },
       "8.79% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      ["2018-10-06", "0.12% probability of flu peaking", "2018-10-13"],
+      ["2018-09-29", "0.12% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "1.84% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "1.84% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "1.84% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0.62% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "1.03% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.21% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.62% probability of flu peaking", "2018-11-24"],
+      ["2018-10-20", "0.62% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "1.03% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.21% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.62% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "1.03% probability of flu peaking", "2018-11-24"],
       ["2018-11-24", "1.03% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "1.03% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "0.62% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "1.03% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "3.07% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "19.00% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "2.66% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "0.62% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "2.66% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "5.93% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "8.38% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "8.79% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "13.69% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "7.56% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "1.44% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "4.70% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "3.48% probability of flu peaking", "2019-03-23"],
+      ["2018-12-01", "0.62% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "1.03% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "3.07% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "19% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "2.66% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "0.62% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "2.66% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "5.93% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "8.38% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "8.79% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "13.69% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "7.56% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.44% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "4.70% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "3.48% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "1.03% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "1.03% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "1.03% probability of flu peaking", "2019-04-06"],
+      ["2019-03-30", "0.21% probability of flu peaking", "2019-04-06"],
       ["2019-04-06", "0.21% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.21% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0.62% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "0.21% probability of flu peaking", "2019-05-04"],
-      ["2019-05-04", "1.03% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.21% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "3.48% probability of flu peaking", "2019-05-25"]
+      ["2019-04-13", "0.62% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.21% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "1.03% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.21% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "3.48% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -711,6 +647,10 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/Delphi-Epicast",
     categories: {
+      "0.02% probability of flu peaking": { color: "#FFF7BC" },
+      "0.03% probability of flu peaking": { color: "#FFF7BC" },
+      "0.04% probability of flu peaking": { color: "#FFF7BC" },
+      "0.07% probability of flu peaking": { color: "#FFF7BC" },
       "0.11% probability of flu peaking": { color: "#FFF7BC" },
       "0.19% probability of flu peaking": { color: "#FFF7BC" },
       "0.34% probability of flu peaking": { color: "#FFF7BC" },
@@ -719,7 +659,6 @@ var dataset = [
       "1.73% probability of flu peaking": { color: "#FFF7BC" },
       "2.74% probability of flu peaking": { color: "#FFF7BC" },
       "4.12% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "10.59% probability of flu peaking": { color: "#FEC44F" },
       "11.03% probability of flu peaking": { color: "#FEC44F" },
       "5.82% probability of flu peaking": { color: "#FEC44F" },
@@ -727,71 +666,39 @@ var dataset = [
       "9.37% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      [
-        "2018-10-06",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-13"
-      ],
-      [
-        "2018-10-13",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-20"
-      ],
-      [
-        "2018-10-20",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-27"
-      ],
-      ["2018-10-27", "0.11% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.19% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.34% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.60% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "1.04% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "1.73% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "2.74% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "4.12% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "5.82% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "7.67% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "9.37% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "10.59% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "11.03% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "10.59% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "9.37% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "7.67% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "5.82% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "4.12% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "2.74% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "1.73% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "1.04% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.60% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "0.34% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "0.19% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.11% probability of flu peaking", "2019-04-20"],
-      [
-        "2019-04-20",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-27"
-      ],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
-      [
-        "2019-05-04",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-11"
-      ],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
-      ]
+      ["2018-09-29", "0.03% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.04% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.07% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.11% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.19% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.34% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.60% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "1.04% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "1.73% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "2.74% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "4.12% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "5.82% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "7.67% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "9.37% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "10.59% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "11.03% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "10.59% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "9.37% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "7.67% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "5.82% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "4.12% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "2.74% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "1.73% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "1.04% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.60% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.34% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.19% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.11% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.07% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.04% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.03% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.03% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.02% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -829,39 +736,39 @@ var dataset = [
       "26.50% probability of flu peaking": { color: "#FE9929" }
     },
     data: [
-      ["2018-10-06", "0.10% probability of flu peaking", "2018-10-13"],
-      ["2018-10-13", "0.12% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "0.13% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0.15% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.19% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.24% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.37% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.60% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.78% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "2.25% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "5.63% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "11.58% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "26.50% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "8.14% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "3.89% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "4.44% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "6.39% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "8.19% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "7.07% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "5.20% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "2.57% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "1.50% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "1.10% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "0.78% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.48% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "0.35% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "0.27% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.26% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0.20% probability of flu peaking", "2019-04-27"],
+      ["2018-09-29", "0.10% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.12% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.13% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.15% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.19% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.24% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.37% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.60% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.78% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "2.25% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "5.63% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "11.58% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "26.50% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "8.14% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "3.89% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "4.44% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "6.39% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "8.19% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "7.07% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "5.20% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "2.57% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.50% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "1.10% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0.78% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.48% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.35% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.27% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.26% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.20% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.15% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0.15% probability of flu peaking", "2019-05-04"],
-      ["2019-05-04", "0.15% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.12% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0.10% probability of flu peaking", "2019-05-25"]
+      ["2019-05-04", "0.12% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.10% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -873,6 +780,11 @@ var dataset = [
       "100% probability of flu peaking": { color: "#993404" }
     },
     data: [
+      [
+        "2018-09-29",
+        "Less than 0.001% probability of flu peaking",
+        "2018-10-06"
+      ],
       [
         "2018-10-06",
         "Less than 0.001% probability of flu peaking",
@@ -928,12 +840,12 @@ var dataset = [
         "Less than 0.001% probability of flu peaking",
         "2018-12-22"
       ],
+      ["2018-12-22", "100% probability of flu peaking", "2018-12-29"],
       [
-        "2018-12-22",
+        "2018-12-29",
         "Less than 0.001% probability of flu peaking",
-        "2018-12-29"
+        "2019-01-05"
       ],
-      ["2018-12-29", "100% probability of flu peaking", "2019-01-05"],
       [
         "2019-01-05",
         "Less than 0.001% probability of flu peaking",
@@ -1028,11 +940,6 @@ var dataset = [
         "2019-05-11",
         "Less than 0.001% probability of flu peaking",
         "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
       ]
     ]
   },
@@ -1042,6 +949,7 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/FluOutlook-Mech",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
+      "0.01% probability of flu peaking": { color: "#FFF7BC" },
       "0.26% probability of flu peaking": { color: "#FFF7BC" },
       "0.36% probability of flu peaking": { color: "#FFF7BC" },
       "0.53% probability of flu peaking": { color: "#FFF7BC" },
@@ -1053,40 +961,36 @@ var dataset = [
       "2.33% probability of flu peaking": { color: "#FFF7BC" },
       "3.22% probability of flu peaking": { color: "#FFF7BC" },
       "3.94% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "12.16% probability of flu peaking": { color: "#FEC44F" },
       "6.22% probability of flu peaking": { color: "#FEC44F" },
       "29.34% probability of flu peaking": { color: "#FE9929" },
       "35.15% probability of flu peaking": { color: "#EC7014" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
       ["2018-10-27", "0% probability of flu peaking", "2018-11-03"],
       ["2018-11-03", "0% probability of flu peaking", "2018-11-10"],
       ["2018-11-10", "0% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.26% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.53% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "6.22% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "12.16% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "0.85% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "35.15% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "29.34% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "1.76% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "0.36% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "3.94% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "3.22% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "2.33% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "1.75% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "1.28% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "0.83% probability of flu peaking", "2019-03-09"],
-      [
-        "2019-03-09",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-16"
-      ],
+      ["2018-11-17", "0.26% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.53% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "6.22% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "12.16% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "0.85% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "35.15% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "29.34% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1.76% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "0.36% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "3.94% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "3.22% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "2.33% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "1.75% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "1.28% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "0.83% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "0.01% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0% probability of flu peaking", "2019-03-16"],
       ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
       ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
@@ -1095,8 +999,7 @@ var dataset = [
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1105,6 +1008,7 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/FluOutlook-MechArgo",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
+      "0.01% probability of flu peaking": { color: "#FFF7BC" },
       "0.26% probability of flu peaking": { color: "#FFF7BC" },
       "0.36% probability of flu peaking": { color: "#FFF7BC" },
       "0.53% probability of flu peaking": { color: "#FFF7BC" },
@@ -1116,40 +1020,36 @@ var dataset = [
       "2.33% probability of flu peaking": { color: "#FFF7BC" },
       "3.22% probability of flu peaking": { color: "#FFF7BC" },
       "3.94% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "12.16% probability of flu peaking": { color: "#FEC44F" },
       "6.22% probability of flu peaking": { color: "#FEC44F" },
       "29.34% probability of flu peaking": { color: "#FE9929" },
       "35.15% probability of flu peaking": { color: "#EC7014" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
       ["2018-10-27", "0% probability of flu peaking", "2018-11-03"],
       ["2018-11-03", "0% probability of flu peaking", "2018-11-10"],
       ["2018-11-10", "0% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.26% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.53% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "6.22% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "12.16% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "0.85% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "35.15% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "29.34% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "1.76% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "0.36% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "3.94% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "3.22% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "2.33% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "1.75% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "1.28% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "0.83% probability of flu peaking", "2019-03-09"],
-      [
-        "2019-03-09",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-16"
-      ],
+      ["2018-11-17", "0.26% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.53% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "6.22% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "12.16% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "0.85% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "35.15% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "29.34% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1.76% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "0.36% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "3.94% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "3.22% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "2.33% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "1.75% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "1.28% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "0.83% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "0.01% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0% probability of flu peaking", "2019-03-16"],
       ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
       ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
@@ -1158,8 +1058,7 @@ var dataset = [
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1168,56 +1067,43 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/FluOutlook-MechAug",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
+      "0.02% probability of flu peaking": { color: "#FFF7BC" },
+      "0.03% probability of flu peaking": { color: "#FFF7BC" },
       "0.12% probability of flu peaking": { color: "#FFF7BC" },
       "0.18% probability of flu peaking": { color: "#FFF7BC" },
       "0.64% probability of flu peaking": { color: "#FFF7BC" },
+      "0% probability of flu peaking": { color: "#FFF7BC" },
       "1.42% probability of flu peaking": { color: "#FFF7BC" },
       "1.44% probability of flu peaking": { color: "#FFF7BC" },
       "1.68% probability of flu peaking": { color: "#FFF7BC" },
       "1.88% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "9.26% probability of flu peaking": { color: "#FEC44F" },
       "28.92% probability of flu peaking": { color: "#FE9929" },
       "54.39% probability of flu peaking": { color: "#993404" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
       ["2018-10-27", "0% probability of flu peaking", "2018-11-03"],
       ["2018-11-03", "0% probability of flu peaking", "2018-11-10"],
       ["2018-11-10", "0% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0% probability of flu peaking", "2018-11-24"],
-      [
-        "2018-11-24",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-01"
-      ],
-      [
-        "2018-12-01",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-08"
-      ],
-      ["2018-12-08", "1.88% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "9.26% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "1.44% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "54.39% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "28.92% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "1.42% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "0.12% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "1.68% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "0.64% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "0.18% probability of flu peaking", "2019-02-16"],
-      [
-        "2019-02-16",
-        "Less than 0.001% probability of flu peaking",
-        "2019-02-23"
-      ],
-      [
-        "2019-02-23",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-02"
-      ],
+      ["2018-11-17", "0.02% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.02% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "1.88% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "9.26% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "1.44% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "54.39% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "28.92% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1.42% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "0.12% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "1.68% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "0.64% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "0.18% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "0.03% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "0% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "0% probability of flu peaking", "2019-03-02"],
       ["2019-03-02", "0% probability of flu peaking", "2019-03-09"],
       ["2019-03-09", "0% probability of flu peaking", "2019-03-16"],
       ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
@@ -1228,8 +1114,7 @@ var dataset = [
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1237,8 +1122,10 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/FluX",
     categories: {
+      "0.03% probability of flu peaking": { color: "#FFF7BC" },
       "0.14% probability of flu peaking": { color: "#FFF7BC" },
       "0.44% probability of flu peaking": { color: "#FFF7BC" },
+      "0% probability of flu peaking": { color: "#FFF7BC" },
       "1.97% probability of flu peaking": { color: "#FFF7BC" },
       "2.15% probability of flu peaking": { color: "#FFF7BC" },
       "2.51% probability of flu peaking": { color: "#FFF7BC" },
@@ -1256,6 +1143,11 @@ var dataset = [
       "9.12% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      [
+        "2018-09-29",
+        "Less than 0.001% probability of flu peaking",
+        "2018-10-06"
+      ],
       [
         "2018-10-06",
         "Less than 0.001% probability of flu peaking",
@@ -1291,72 +1183,31 @@ var dataset = [
         "Less than 0.001% probability of flu peaking",
         "2018-11-24"
       ],
-      [
-        "2018-11-24",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-01"
-      ],
-      [
-        "2018-12-01",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-08"
-      ],
-      ["2018-12-08", "0.14% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "2.51% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "10.37% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "10.39% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "2.93% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "1.97% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "3.50% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "9.12% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "15.96% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "17.64% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "12.16% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "4.36% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "2.68% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "3.48% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "2.15% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.44% probability of flu peaking", "2019-03-30"],
-      [
-        "2019-03-30",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-06"
-      ],
-      [
-        "2019-04-06",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-13"
-      ],
-      [
-        "2019-04-13",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-20"
-      ],
-      [
-        "2019-04-20",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-27"
-      ],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
-      [
-        "2019-05-04",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-11"
-      ],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
-      ]
+      ["2018-11-24", "0% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0.14% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "2.51% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "10.37% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "10.39% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "2.93% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1.97% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "3.50% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "9.12% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "15.96% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "17.64% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "12.16% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "4.36% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "2.68% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "3.48% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "2.15% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.44% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.03% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.03% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.03% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.03% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.03% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.03% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.03% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.03% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1372,6 +1223,7 @@ var dataset = [
       "63.86% probability of flu peaking": { color: "#993404" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
@@ -1380,7 +1232,11 @@ var dataset = [
       ["2018-11-10", "0% probability of flu peaking", "2018-11-17"],
       ["2018-11-17", "0% probability of flu peaking", "2018-11-24"],
       ["2018-11-24", "0% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0% probability of flu peaking", "2018-12-08"],
+      [
+        "2018-12-01",
+        "Less than 0.001% probability of flu peaking",
+        "2018-12-08"
+      ],
       [
         "2018-12-08",
         "Less than 0.001% probability of flu peaking",
@@ -1396,15 +1252,15 @@ var dataset = [
         "Less than 0.001% probability of flu peaking",
         "2018-12-29"
       ],
+      ["2018-12-29", "2.37% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "31.18% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "63.86% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "2.59% probability of flu peaking", "2019-01-26"],
       [
-        "2018-12-29",
+        "2019-01-26",
         "Less than 0.001% probability of flu peaking",
-        "2019-01-05"
+        "2019-02-02"
       ],
-      ["2019-01-05", "2.37% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "31.18% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "63.86% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "2.59% probability of flu peaking", "2019-02-02"],
       [
         "2019-02-02",
         "Less than 0.001% probability of flu peaking",
@@ -1425,11 +1281,7 @@ var dataset = [
         "Less than 0.001% probability of flu peaking",
         "2019-03-02"
       ],
-      [
-        "2019-03-02",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-09"
-      ],
+      ["2019-03-02", "0% probability of flu peaking", "2019-03-09"],
       ["2019-03-09", "0% probability of flu peaking", "2019-03-16"],
       ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
@@ -1439,8 +1291,7 @@ var dataset = [
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1457,6 +1308,7 @@ var dataset = [
       "17.88% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
@@ -1473,13 +1325,13 @@ var dataset = [
       ["2019-01-05", "0% probability of flu peaking", "2019-01-12"],
       ["2019-01-12", "0% probability of flu peaking", "2019-01-19"],
       ["2019-01-19", "0% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "0% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "15.81% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "17.28% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "17.88% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "17.11% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "16.12% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "15.80% probability of flu peaking", "2019-03-16"],
+      ["2019-01-26", "15.81% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "17.28% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "17.88% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "17.11% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "16.12% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "15.80% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0% probability of flu peaking", "2019-03-16"],
       ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
       ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
@@ -1488,8 +1340,7 @@ var dataset = [
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1498,63 +1349,63 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/ISU",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
-      "0.7% probability of flu peaking": { color: "#FFF7BC" },
-      "1.0% probability of flu peaking": { color: "#FFF7BC" },
-      "1.2% probability of flu peaking": { color: "#FFF7BC" },
-      "1.3% probability of flu peaking": { color: "#FFF7BC" },
-      "1.4% probability of flu peaking": { color: "#FFF7BC" },
-      "1.5% probability of flu peaking": { color: "#FFF7BC" },
-      "1.7% probability of flu peaking": { color: "#FFF7BC" },
+      "0.65% probability of flu peaking": { color: "#FFF7BC" },
+      "1.20% probability of flu peaking": { color: "#FFF7BC" },
+      "1.30% probability of flu peaking": { color: "#FFF7BC" },
+      "1.40% probability of flu peaking": { color: "#FFF7BC" },
+      "1.45% probability of flu peaking": { color: "#FFF7BC" },
+      "1.65% probability of flu peaking": { color: "#FFF7BC" },
       "1.80% probability of flu peaking": { color: "#FFF7BC" },
-      "1.9% probability of flu peaking": { color: "#FFF7BC" },
-      "2.0% probability of flu peaking": { color: "#FFF7BC" },
-      "2.1% probability of flu peaking": { color: "#FFF7BC" },
-      "2.2% probability of flu peaking": { color: "#FFF7BC" },
-      "2.5% probability of flu peaking": { color: "#FFF7BC" },
-      "2.8% probability of flu peaking": { color: "#FFF7BC" },
-      "3.2% probability of flu peaking": { color: "#FFF7BC" },
-      "3.6% probability of flu peaking": { color: "#FFF7BC" },
-      "4.2% probability of flu peaking": { color: "#FFF7BC" },
-      "4.5% probability of flu peaking": { color: "#FFF7BC" },
-      "10.2% probability of flu peaking": { color: "#FEC44F" },
+      "1.90% probability of flu peaking": { color: "#FFF7BC" },
+      "1.95% probability of flu peaking": { color: "#FFF7BC" },
+      "1% probability of flu peaking": { color: "#FFF7BC" },
+      "2.05% probability of flu peaking": { color: "#FFF7BC" },
+      "2.20% probability of flu peaking": { color: "#FFF7BC" },
+      "2.50% probability of flu peaking": { color: "#FFF7BC" },
+      "2.75% probability of flu peaking": { color: "#FFF7BC" },
+      "3.20% probability of flu peaking": { color: "#FFF7BC" },
+      "3.55% probability of flu peaking": { color: "#FFF7BC" },
+      "4.15% probability of flu peaking": { color: "#FFF7BC" },
+      "4.45% probability of flu peaking": { color: "#FFF7BC" },
+      "10.15% probability of flu peaking": { color: "#FEC44F" },
       "15.95% probability of flu peaking": { color: "#FEC44F" },
-      "16.0% probability of flu peaking": { color: "#FEC44F" },
-      "6.1% probability of flu peaking": { color: "#FEC44F" }
+      "16% probability of flu peaking": { color: "#FEC44F" },
+      "6.05% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "16.0% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "4.5% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "3.6% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "2.5% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "2.1% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "2.0% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "1.3% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "1.2% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "1.2% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "1.5% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "0.7% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "1.0% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "1.4% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "2.2% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "1.3% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "1.4% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "1.5% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "1.5% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "1.9% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "2.8% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "1.80% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "1.7% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "2.1% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "1.9% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "2.0% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "3.2% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "4.2% probability of flu peaking", "2019-05-04"],
-      ["2019-05-04", "6.1% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "10.2% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "15.95% probability of flu peaking", "2019-05-25"]
+      ["2018-10-20", "16% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "4.45% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "3.55% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "2.50% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "2.05% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "1.95% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "1.30% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "1.20% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "1.20% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "1.45% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "0.65% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "1.40% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "2.20% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "1.30% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "1.40% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "1.45% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "1.45% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.90% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "2.75% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "1.80% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "1.65% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "2.05% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "1.90% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "1.95% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "3.20% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "4.15% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "6.05% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "10.15% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "15.95% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1592,39 +1443,39 @@ var dataset = [
       "8.02% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
-      ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "0.69% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0.58% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.91% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "1.36% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "1.95% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "2.69% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "3.56% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "4.51% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "5.50% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "6.43% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "7.21% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "7.76% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "8.02% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "7.95% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "7.57% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "6.92% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "6.06% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "5.10% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "4.12% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "3.19% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "2.38% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "1.70% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "1.16% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "0.76% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "0.48% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.29% probability of flu peaking", "2019-04-20"],
+      ["2018-10-13", "0.69% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.58% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.91% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "1.36% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "1.95% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "2.69% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "3.56% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "4.51% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "5.50% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "6.43% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "7.21% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "7.76% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "8.02% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "7.95% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "7.57% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "6.92% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "6.06% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "5.10% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "4.12% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "3.19% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "2.38% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "1.70% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "1.16% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.76% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.48% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.29% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.22% probability of flu peaking", "2019-04-20"],
       ["2019-04-20", "0.22% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0.22% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0.22% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.22% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0.22% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0.22% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1665,39 +1516,39 @@ var dataset = [
       "8.85% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      ["2018-10-06", "0.12% probability of flu peaking", "2018-10-13"],
-      ["2018-10-13", "0.15% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "0.26% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0.29% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.32% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.31% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.37% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.71% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.83% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "1.40% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "2.38% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "4.76% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "8.64% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "3.87% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "3.91% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "5.06% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "6.49% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "8.85% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "14.18% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "14.48% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "8.44% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "3.92% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "3.97% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "2.10% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "1.46% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "1.02% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "0.46% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.26% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0.20% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "0.19% probability of flu peaking", "2019-05-04"],
-      ["2019-05-04", "0.20% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.18% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0.22% probability of flu peaking", "2019-05-25"]
+      ["2018-09-29", "0.12% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.15% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.26% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.29% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.32% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.31% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.37% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.71% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.83% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "1.40% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "2.38% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "4.76% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "8.64% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "3.87% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "3.91% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "5.06% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "6.49% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "8.85% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "14.18% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "14.48% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "8.44% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "3.92% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "3.97% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "2.10% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "1.46% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "1.02% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.46% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.26% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.20% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.19% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.20% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.18% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.22% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1738,39 +1589,39 @@ var dataset = [
       "8.85% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      ["2018-10-06", "0.12% probability of flu peaking", "2018-10-13"],
-      ["2018-10-13", "0.15% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "0.26% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0.29% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.32% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.31% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.37% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.71% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.83% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "1.40% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "2.38% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "4.76% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "8.64% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "3.87% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "3.91% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "5.06% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "6.49% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "8.85% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "14.18% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "14.48% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "8.44% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "3.92% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "3.97% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "2.10% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "1.46% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "1.02% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "0.46% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.26% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0.20% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "0.19% probability of flu peaking", "2019-05-04"],
-      ["2019-05-04", "0.20% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.18% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0.22% probability of flu peaking", "2019-05-25"]
+      ["2018-09-29", "0.12% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.15% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.26% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.29% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.32% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.31% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.37% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.71% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.83% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "1.40% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "2.38% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "4.76% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "8.64% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "3.87% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "3.91% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "5.06% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "6.49% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "8.85% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "14.18% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "14.48% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "8.44% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "3.92% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "3.97% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "2.10% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "1.46% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "1.02% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.46% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.26% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.20% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.19% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.20% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.18% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.22% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1779,16 +1630,17 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/KPWHRI",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
-      "0.1% probability of flu peaking": { color: "#FFF7BC" },
-      "0.5% probability of flu peaking": { color: "#FFF7BC" },
-      "0.6% probability of flu peaking": { color: "#FFF7BC" },
-      "1.6% probability of flu peaking": { color: "#FFF7BC" },
-      "13.9% probability of flu peaking": { color: "#FEC44F" },
-      "16.9% probability of flu peaking": { color: "#FEC44F" },
-      "29.4% probability of flu peaking": { color: "#FE9929" },
-      "37.0% probability of flu peaking": { color: "#EC7014" }
+      "0.10% probability of flu peaking": { color: "#FFF7BC" },
+      "0.50% probability of flu peaking": { color: "#FFF7BC" },
+      "0.60% probability of flu peaking": { color: "#FFF7BC" },
+      "1.60% probability of flu peaking": { color: "#FFF7BC" },
+      "13.90% probability of flu peaking": { color: "#FEC44F" },
+      "16.90% probability of flu peaking": { color: "#FEC44F" },
+      "29.40% probability of flu peaking": { color: "#FE9929" },
+      "37% probability of flu peaking": { color: "#EC7014" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
@@ -1800,18 +1652,18 @@ var dataset = [
       ["2018-12-01", "0% probability of flu peaking", "2018-12-08"],
       ["2018-12-08", "0% probability of flu peaking", "2018-12-15"],
       ["2018-12-15", "0% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "0% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "16.9% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "29.4% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "37.0% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "13.9% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "0.1% probability of flu peaking", "2019-02-02"],
+      ["2018-12-22", "16.90% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "29.40% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "37% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "13.90% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "0.10% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "0% probability of flu peaking", "2019-02-02"],
       ["2019-02-02", "0% probability of flu peaking", "2019-02-09"],
       ["2019-02-09", "0% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "0% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "0.5% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "1.6% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "0.6% probability of flu peaking", "2019-03-16"],
+      ["2019-02-16", "0.50% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.60% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "0.60% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0% probability of flu peaking", "2019-03-16"],
       ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
       ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
@@ -1820,8 +1672,7 @@ var dataset = [
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1829,6 +1680,9 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/LANL-Dante",
     categories: {
+      "0.02% probability of flu peaking": { color: "#FFF7BC" },
+      "0.06% probability of flu peaking": { color: "#FFF7BC" },
+      "0.09% probability of flu peaking": { color: "#FFF7BC" },
       "0.46% probability of flu peaking": { color: "#FFF7BC" },
       "0.63% probability of flu peaking": { color: "#FFF7BC" },
       "0.67% probability of flu peaking": { color: "#FFF7BC" },
@@ -1837,7 +1691,6 @@ var dataset = [
       "2.41% probability of flu peaking": { color: "#FFF7BC" },
       "3.79% probability of flu peaking": { color: "#FFF7BC" },
       "4.79% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "13.55% probability of flu peaking": { color: "#FEC44F" },
       "13.92% probability of flu peaking": { color: "#FEC44F" },
       "9.02% probability of flu peaking": { color: "#FEC44F" },
@@ -1845,119 +1698,39 @@ var dataset = [
       "38.69% probability of flu peaking": { color: "#EC7014" }
     },
     data: [
-      [
-        "2018-10-06",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-13"
-      ],
-      [
-        "2018-10-13",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-20"
-      ],
-      [
-        "2018-10-20",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-27"
-      ],
-      [
-        "2018-10-27",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-03"
-      ],
-      [
-        "2018-11-03",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-10"
-      ],
-      [
-        "2018-11-10",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-17"
-      ],
-      [
-        "2018-11-17",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-24"
-      ],
-      [
-        "2018-11-24",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-01"
-      ],
-      [
-        "2018-12-01",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-08"
-      ],
-      [
-        "2018-12-08",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-15"
-      ],
-      [
-        "2018-12-15",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-22"
-      ],
-      ["2018-12-22", "0.63% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "38.69% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "2.41% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "1.18% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "4.79% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "9.02% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "13.92% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "13.55% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "9.68% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "3.79% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "0.72% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "0.67% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "0.46% probability of flu peaking", "2019-03-23"],
-      [
-        "2019-03-23",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-30"
-      ],
-      [
-        "2019-03-30",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-06"
-      ],
-      [
-        "2019-04-06",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-13"
-      ],
-      [
-        "2019-04-13",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-20"
-      ],
-      [
-        "2019-04-20",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-27"
-      ],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
-      [
-        "2019-05-04",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-11"
-      ],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
-      ]
+      ["2018-09-29", "0.02% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.02% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.02% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.02% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.02% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.02% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.02% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.02% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.02% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0.02% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "0.02% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "0.63% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "38.69% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "2.41% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1.18% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "4.79% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "9.02% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "13.92% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "13.55% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "9.68% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "3.79% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "0.72% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "0.67% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0.46% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.09% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.06% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.02% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.02% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.02% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.02% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.02% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.02% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.02% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -1965,6 +1738,10 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/LANL-DBMplus",
     categories: {
+      "0.02% probability of flu peaking": { color: "#FFF7BC" },
+      "0.04% probability of flu peaking": { color: "#FFF7BC" },
+      "0.06% probability of flu peaking": { color: "#FFF7BC" },
+      "0.08% probability of flu peaking": { color: "#FFF7BC" },
       "0.15% probability of flu peaking": { color: "#FFF7BC" },
       "0.17% probability of flu peaking": { color: "#FFF7BC" },
       "0.19% probability of flu peaking": { color: "#FFF7BC" },
@@ -1979,7 +1756,6 @@ var dataset = [
       "2.60% probability of flu peaking": { color: "#FFF7BC" },
       "4.58% probability of flu peaking": { color: "#FFF7BC" },
       "4.69% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "11.85% probability of flu peaking": { color: "#FEC44F" },
       "12.95% probability of flu peaking": { color: "#FEC44F" },
       "14.06% probability of flu peaking": { color: "#FEC44F" },
@@ -1988,93 +1764,123 @@ var dataset = [
       "27.31% probability of flu peaking": { color: "#FE9929" }
     },
     data: [
-      [
-        "2018-10-06",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-13"
-      ],
-      [
-        "2018-10-13",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-20"
-      ],
-      [
-        "2018-10-20",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-27"
-      ],
+      ["2018-09-29", "0.02% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.04% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.06% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.30% probability of flu peaking", "2018-10-27"],
       ["2018-10-27", "0.30% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.30% probability of flu peaking", "2018-11-10"],
+      ["2018-11-03", "0.19% probability of flu peaking", "2018-11-10"],
       ["2018-11-10", "0.19% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.19% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.41% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.17% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "0.15% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "0.58% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "4.69% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "27.31% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "4.58% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "1.01% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "2.60% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "7.03% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "12.95% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "14.06% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "11.85% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "6.77% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "1.67% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "1.20% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "0.94% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.53% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "0.17% probability of flu peaking", "2019-04-06"],
-      [
-        "2019-04-06",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-13"
-      ],
-      [
-        "2019-04-13",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-20"
-      ],
-      [
-        "2019-04-20",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-27"
-      ],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
-      [
-        "2019-05-04",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-11"
-      ],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
-      ]
+      ["2018-11-17", "0.41% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.17% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0.15% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "0.58% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "4.69% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "27.31% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "4.58% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1.01% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "2.60% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "7.03% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "12.95% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "14.06% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "11.85% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "6.77% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.67% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "1.20% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0.94% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.53% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.17% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.08% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.02% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.04% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.02% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.04% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.02% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.02% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
     measure: "PPFST",
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/PPFST",
-    categories: {},
-    data: []
+    categories: {
+      "0.08% probability of flu peaking": { color: "#FFF7BC" },
+      "0.12% probability of flu peaking": { color: "#FFF7BC" },
+      "0.14% probability of flu peaking": { color: "#FFF7BC" },
+      "0.16% probability of flu peaking": { color: "#FFF7BC" },
+      "0.30% probability of flu peaking": { color: "#FFF7BC" },
+      "0.32% probability of flu peaking": { color: "#FFF7BC" },
+      "0.33% probability of flu peaking": { color: "#FFF7BC" },
+      "0.47% probability of flu peaking": { color: "#FFF7BC" },
+      "0.48% probability of flu peaking": { color: "#FFF7BC" },
+      "0.49% probability of flu peaking": { color: "#FFF7BC" },
+      "0.55% probability of flu peaking": { color: "#FFF7BC" },
+      "0.57% probability of flu peaking": { color: "#FFF7BC" },
+      "0.61% probability of flu peaking": { color: "#FFF7BC" },
+      "0.69% probability of flu peaking": { color: "#FFF7BC" },
+      "0.79% probability of flu peaking": { color: "#FFF7BC" },
+      "0.82% probability of flu peaking": { color: "#FFF7BC" },
+      "0.84% probability of flu peaking": { color: "#FFF7BC" },
+      "1.33% probability of flu peaking": { color: "#FFF7BC" },
+      "1.48% probability of flu peaking": { color: "#FFF7BC" },
+      "1.53% probability of flu peaking": { color: "#FFF7BC" },
+      "1.99% probability of flu peaking": { color: "#FFF7BC" },
+      "2.26% probability of flu peaking": { color: "#FFF7BC" },
+      "2.72% probability of flu peaking": { color: "#FFF7BC" },
+      "2.87% probability of flu peaking": { color: "#FFF7BC" },
+      "3.92% probability of flu peaking": { color: "#FFF7BC" },
+      "10.82% probability of flu peaking": { color: "#FEC44F" },
+      "11.60% probability of flu peaking": { color: "#FEC44F" },
+      "12.09% probability of flu peaking": { color: "#FEC44F" },
+      "6.07% probability of flu peaking": { color: "#FEC44F" },
+      "7.33% probability of flu peaking": { color: "#FEC44F" },
+      "25.96% probability of flu peaking": { color: "#FE9929" }
+    },
+    data: [
+      ["2018-09-29", "0.08% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.82% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.84% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.32% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.49% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.14% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.33% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.55% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.57% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0.47% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "0.79% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "2.26% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "25.96% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "2.72% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1.33% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "3.92% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "7.33% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "10.82% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "11.60% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "12.09% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "6.07% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.48% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "2.87% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "1.99% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.69% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.61% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.16% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.14% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.30% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.12% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.48% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.12% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "1.53% probability of flu peaking", "2019-05-18"]
+    ]
   },
   {
     measure: "Protea-Cheetah",
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/Protea-Cheetah",
     categories: {
+      "0.01% probability of flu peaking": { color: "#FFF7BC" },
+      "0.04% probability of flu peaking": { color: "#FFF7BC" },
+      "0.07% probability of flu peaking": { color: "#FFF7BC" },
+      "0.10% probability of flu peaking": { color: "#FFF7BC" },
       "0.14% probability of flu peaking": { color: "#FFF7BC" },
       "0.15% probability of flu peaking": { color: "#FFF7BC" },
       "0.21% probability of flu peaking": { color: "#FFF7BC" },
@@ -2088,8 +1894,7 @@ var dataset = [
       "2.47% probability of flu peaking": { color: "#FFF7BC" },
       "2.54% probability of flu peaking": { color: "#FFF7BC" },
       "3.42% probability of flu peaking": { color: "#FFF7BC" },
-      "4.00% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
+      "4% probability of flu peaking": { color: "#FFF7BC" },
       "10.87% probability of flu peaking": { color: "#FEC44F" },
       "11.62% probability of flu peaking": { color: "#FEC44F" },
       "17.04% probability of flu peaking": { color: "#FEC44F" },
@@ -2097,95 +1902,39 @@ var dataset = [
       "30.85% probability of flu peaking": { color: "#FE9929" }
     },
     data: [
-      [
-        "2018-10-06",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-13"
-      ],
-      [
-        "2018-10-13",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-20"
-      ],
-      [
-        "2018-10-20",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-27"
-      ],
-      [
-        "2018-10-27",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-03"
-      ],
-      [
-        "2018-11-03",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-10"
-      ],
-      [
-        "2018-11-10",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-17"
-      ],
-      [
-        "2018-11-17",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-24"
-      ],
-      ["2018-11-24", "0.21% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.15% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "0.27% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "0.55% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "2.05% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "4.00% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "2.54% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "3.42% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "10.87% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "17.04% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "30.85% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "11.62% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "7.44% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "2.47% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "1.30% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "2.18% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "1.75% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.58% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "0.14% probability of flu peaking", "2019-04-06"],
-      [
-        "2019-04-06",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-13"
-      ],
-      [
-        "2019-04-13",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-20"
-      ],
-      [
-        "2019-04-20",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-27"
-      ],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
-      [
-        "2019-05-04",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-11"
-      ],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
-      ]
+      ["2018-09-29", "0.04% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.04% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.10% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.04% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.10% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.04% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.10% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.21% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.15% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0.27% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "0.55% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "2.05% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "4% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "2.54% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "3.42% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "10.87% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "17.04% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "30.85% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "11.62% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "7.44% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "2.47% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "1.30% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "2.18% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "1.75% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.58% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.14% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.01% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.01% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.01% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.07% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.01% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.01% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.01% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2194,6 +1943,7 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/Protea-Springbok",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
+      "0.09% probability of flu peaking": { color: "#FFF7BC" },
       "0.17% probability of flu peaking": { color: "#FFF7BC" },
       "0.26% probability of flu peaking": { color: "#FFF7BC" },
       "0.34% probability of flu peaking": { color: "#FFF7BC" },
@@ -2201,7 +1951,6 @@ var dataset = [
       "0.85% probability of flu peaking": { color: "#FFF7BC" },
       "1.11% probability of flu peaking": { color: "#FFF7BC" },
       "2.90% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "10.90% probability of flu peaking": { color: "#FEC44F" },
       "12.86% probability of flu peaking": { color: "#FEC44F" },
       "5.20% probability of flu peaking": { color: "#FEC44F" },
@@ -2209,67 +1958,39 @@ var dataset = [
       "41.31% probability of flu peaking": { color: "#EC7014" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
-      ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
-      [
-        "2018-10-20",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-27"
-      ],
-      ["2018-10-27", "0% probability of flu peaking", "2018-11-03"],
-      [
-        "2018-11-03",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-10"
-      ],
-      ["2018-11-10", "0% probability of flu peaking", "2018-11-17"],
-      [
-        "2018-11-17",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-24"
-      ],
-      ["2018-11-24", "0.26% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.17% probability of flu peaking", "2018-12-08"],
+      ["2018-10-13", "0.09% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.09% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.09% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.26% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.17% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0.34% probability of flu peaking", "2018-12-08"],
       ["2018-12-08", "0.34% probability of flu peaking", "2018-12-15"],
       ["2018-12-15", "0.34% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "0.34% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "1.11% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "0.77% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "2.90% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "12.86% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "22.06% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "41.31% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "10.90% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "5.20% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "0.85% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "0% probability of flu peaking", "2019-03-09"],
-      [
-        "2019-03-09",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-16"
-      ],
-      [
-        "2019-03-16",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-23"
-      ],
-      ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
-      [
-        "2019-03-30",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-06"
-      ],
+      ["2018-12-22", "1.11% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "0.77% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "2.90% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "12.86% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "22.06% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "41.31% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "10.90% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "5.20% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "0.85% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "0% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "0.09% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0.09% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.09% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
       ["2019-04-06", "0% probability of flu peaking", "2019-04-13"],
       ["2019-04-13", "0% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
+      ["2019-04-20", "0.09% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2287,9 +2008,10 @@ var dataset = [
       "15.76% probability of flu peaking": { color: "#FEC44F" },
       "17.91% probability of flu peaking": { color: "#FEC44F" },
       "19.44% probability of flu peaking": { color: "#FEC44F" },
-      "22.0% probability of flu peaking": { color: "#FE9929" }
+      "22% probability of flu peaking": { color: "#FE9929" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
@@ -2300,29 +2022,28 @@ var dataset = [
       ["2018-11-24", "0% probability of flu peaking", "2018-12-01"],
       ["2018-12-01", "0% probability of flu peaking", "2018-12-08"],
       ["2018-12-08", "0% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "0% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "3.33% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "22.0% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "3.33% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "0.56% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "3.67% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "1.67% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "17.91% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "15.76% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "19.44% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "2.78% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "0.56% probability of flu peaking", "2019-03-09"],
+      ["2018-12-15", "3.33% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "22% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "3.33% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "0.56% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "3.67% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "1.67% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "17.91% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "15.76% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "19.44% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "2.78% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "0.56% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "4.22% probability of flu peaking", "2019-03-09"],
       ["2019-03-09", "4.22% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "4.22% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.56% probability of flu peaking", "2019-03-30"],
+      ["2019-03-16", "0.56% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
       ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
       ["2019-04-06", "0% probability of flu peaking", "2019-04-13"],
       ["2019-04-13", "0% probability of flu peaking", "2019-04-20"],
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2346,6 +2067,7 @@ var dataset = [
       "31.63% probability of flu peaking": { color: "#FE9929" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
@@ -2355,30 +2077,29 @@ var dataset = [
       ["2018-11-17", "0% probability of flu peaking", "2018-11-24"],
       ["2018-11-24", "0% probability of flu peaking", "2018-12-01"],
       ["2018-12-01", "0% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "0% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "0.11% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "6.06% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "6.44% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "4.44% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "0.74% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "1.40% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "6.16% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "22.53% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "31.63% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "11.17% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "3.97% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "0.96% probability of flu peaking", "2019-03-09"],
+      ["2018-12-08", "0.11% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "6.06% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "6.44% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "4.44% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "0.74% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "1.40% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "6.16% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "22.53% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "31.63% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "11.17% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "3.97% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "0.96% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "1.81% probability of flu peaking", "2019-03-09"],
       ["2019-03-09", "1.81% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "1.81% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.74% probability of flu peaking", "2019-03-30"],
+      ["2019-03-16", "0.74% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
       ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
       ["2019-04-06", "0% probability of flu peaking", "2019-04-13"],
       ["2019-04-13", "0% probability of flu peaking", "2019-04-20"],
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2386,128 +2107,56 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/TeamAnonymous",
     categories: {
-      "1.3% probability of flu peaking": { color: "#FFF7BC" },
-      "1.5% probability of flu peaking": { color: "#FFF7BC" },
+      "0% probability of flu peaking": { color: "#FFF7BC" },
+      "1.30% probability of flu peaking": { color: "#FFF7BC" },
+      "1.50% probability of flu peaking": { color: "#FFF7BC" },
       "1.80% probability of flu peaking": { color: "#FFF7BC" },
-      "2.0% probability of flu peaking": { color: "#FFF7BC" },
-      "2.1% probability of flu peaking": { color: "#FFF7BC" },
-      "2.5% probability of flu peaking": { color: "#FFF7BC" },
-      "4.5% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
-      "10.0% probability of flu peaking": { color: "#FEC44F" },
-      "13.0% probability of flu peaking": { color: "#FEC44F" },
-      "14.0% probability of flu peaking": { color: "#FEC44F" },
-      "15.00% probability of flu peaking": { color: "#FEC44F" },
-      "18.0% probability of flu peaking": { color: "#FEC44F" },
-      "6.2% probability of flu peaking": { color: "#FEC44F" },
-      "7.0% probability of flu peaking": { color: "#FEC44F" }
+      "2.10% probability of flu peaking": { color: "#FFF7BC" },
+      "2.50% probability of flu peaking": { color: "#FFF7BC" },
+      "2% probability of flu peaking": { color: "#FFF7BC" },
+      "4.50% probability of flu peaking": { color: "#FFF7BC" },
+      "10% probability of flu peaking": { color: "#FEC44F" },
+      "13% probability of flu peaking": { color: "#FEC44F" },
+      "14% probability of flu peaking": { color: "#FEC44F" },
+      "15% probability of flu peaking": { color: "#FEC44F" },
+      "18% probability of flu peaking": { color: "#FEC44F" },
+      "6.20% probability of flu peaking": { color: "#FEC44F" },
+      "7% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      [
-        "2018-10-06",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-13"
-      ],
-      [
-        "2018-10-13",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-20"
-      ],
-      ["2018-10-20", "1.80% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "2.1% probability of flu peaking", "2018-11-03"],
-      [
-        "2018-11-03",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-10"
-      ],
-      [
-        "2018-11-10",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-17"
-      ],
-      [
-        "2018-11-17",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-24"
-      ],
-      [
-        "2018-11-24",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-01"
-      ],
-      [
-        "2018-12-01",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-08"
-      ],
-      [
-        "2018-12-08",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-15"
-      ],
-      ["2018-12-15", "1.3% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "4.5% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "15.00% probability of flu peaking", "2019-01-05"],
-      [
-        "2019-01-05",
-        "Less than 0.001% probability of flu peaking",
-        "2019-01-12"
-      ],
-      ["2019-01-12", "1.5% probability of flu peaking", "2019-01-19"],
-      [
-        "2019-01-19",
-        "Less than 0.001% probability of flu peaking",
-        "2019-01-26"
-      ],
-      ["2019-01-26", "2.0% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "2.5% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "13.0% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "14.0% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "18.0% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "10.0% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "6.2% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "7.0% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "2.1% probability of flu peaking", "2019-03-30"],
-      [
-        "2019-03-30",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-06"
-      ],
-      [
-        "2019-04-06",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-13"
-      ],
-      [
-        "2019-04-13",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-20"
-      ],
-      [
-        "2019-04-20",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-27"
-      ],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
-      [
-        "2019-05-04",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-11"
-      ],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
-      ]
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "1.80% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "2.10% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "1.30% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "4.50% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "15% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "0% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "1.50% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "0% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "2% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "2.50% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "13% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "14% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "18% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "10% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "6.20% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "7% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "2.10% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2516,15 +2165,16 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/Tulane2018",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
-      "4.0% probability of flu peaking": { color: "#FFF7BC" },
-      "14.5% probability of flu peaking": { color: "#FEC44F" },
-      "19.5% probability of flu peaking": { color: "#FEC44F" },
-      "5.1% probability of flu peaking": { color: "#FEC44F" },
-      "5.2% probability of flu peaking": { color: "#FEC44F" },
-      "22.6% probability of flu peaking": { color: "#FE9929" },
-      "29.1% probability of flu peaking": { color: "#FE9929" }
+      "4% probability of flu peaking": { color: "#FFF7BC" },
+      "14.50% probability of flu peaking": { color: "#FEC44F" },
+      "19.50% probability of flu peaking": { color: "#FEC44F" },
+      "5.10% probability of flu peaking": { color: "#FEC44F" },
+      "5.20% probability of flu peaking": { color: "#FEC44F" },
+      "22.60% probability of flu peaking": { color: "#FE9929" },
+      "29.10% probability of flu peaking": { color: "#FE9929" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
@@ -2536,19 +2186,19 @@ var dataset = [
       ["2018-12-01", "0% probability of flu peaking", "2018-12-08"],
       ["2018-12-08", "0% probability of flu peaking", "2018-12-15"],
       ["2018-12-15", "0% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "0% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "29.1% probability of flu peaking", "2019-01-05"],
+      ["2018-12-22", "29.10% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "0% probability of flu peaking", "2019-01-05"],
       ["2019-01-05", "0% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "0% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "5.2% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "0% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "14.5% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "19.5% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "22.6% probability of flu peaking", "2019-02-23"],
+      ["2019-01-12", "5.20% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "0% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "14.50% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "19.50% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "22.60% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "0% probability of flu peaking", "2019-02-23"],
       ["2019-02-23", "0% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "0% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "4.0% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "5.1% probability of flu peaking", "2019-03-23"],
+      ["2019-03-02", "4% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "5.10% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
       ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
       ["2019-04-06", "0% probability of flu peaking", "2019-04-13"],
@@ -2556,8 +2206,7 @@ var dataset = [
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2566,14 +2215,15 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/UA-EpiCos",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
-      "10.1% probability of flu peaking": { color: "#FEC44F" },
-      "10.7% probability of flu peaking": { color: "#FEC44F" },
-      "10.9% probability of flu peaking": { color: "#FEC44F" },
-      "6.6% probability of flu peaking": { color: "#FEC44F" },
-      "7.9% probability of flu peaking": { color: "#FEC44F" },
-      "9.1% probability of flu peaking": { color: "#FEC44F" }
+      "10.10% probability of flu peaking": { color: "#FEC44F" },
+      "10.72% probability of flu peaking": { color: "#FEC44F" },
+      "10.94% probability of flu peaking": { color: "#FEC44F" },
+      "6.63% probability of flu peaking": { color: "#FEC44F" },
+      "7.94% probability of flu peaking": { color: "#FEC44F" },
+      "9.14% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
@@ -2584,18 +2234,18 @@ var dataset = [
       ["2018-11-24", "0% probability of flu peaking", "2018-12-01"],
       ["2018-12-01", "0% probability of flu peaking", "2018-12-08"],
       ["2018-12-08", "0% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "0% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "6.6% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "7.9% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "9.1% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "10.1% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "10.7% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "10.9% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "10.7% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "10.1% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "9.1% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "7.9% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "6.6% probability of flu peaking", "2019-03-09"],
+      ["2018-12-15", "6.63% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "7.94% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "9.14% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "10.10% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "10.72% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "10.94% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "10.72% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "10.10% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "9.14% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "7.94% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "6.63% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "0% probability of flu peaking", "2019-03-09"],
       ["2019-03-09", "0% probability of flu peaking", "2019-03-16"],
       ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
@@ -2605,8 +2255,7 @@ var dataset = [
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2614,135 +2263,56 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/UA%20EpiFlu",
     categories: {
-      "0.2% probability of flu peaking": { color: "#FFF7BC" },
-      "0.4% probability of flu peaking": { color: "#FFF7BC" },
+      "0.07% probability of flu peaking": { color: "#FFF7BC" },
+      "0.20% probability of flu peaking": { color: "#FFF7BC" },
+      "0.40% probability of flu peaking": { color: "#FFF7BC" },
       "0.53% probability of flu peaking": { color: "#FFF7BC" },
       "0.93% probability of flu peaking": { color: "#FFF7BC" },
+      "0% probability of flu peaking": { color: "#FFF7BC" },
       "1.47% probability of flu peaking": { color: "#FFF7BC" },
-      "2.2% probability of flu peaking": { color: "#FFF7BC" },
+      "2.20% probability of flu peaking": { color: "#FFF7BC" },
       "2.67% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "6.27% probability of flu peaking": { color: "#FEC44F" },
-      "9.4% probability of flu peaking": { color: "#FEC44F" },
+      "9.40% probability of flu peaking": { color: "#FEC44F" },
       "9.53% probability of flu peaking": { color: "#FEC44F" },
       "20.93% probability of flu peaking": { color: "#FE9929" },
       "21.27% probability of flu peaking": { color: "#FE9929" },
       "23.93% probability of flu peaking": { color: "#FE9929" }
     },
     data: [
-      [
-        "2018-10-06",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-13"
-      ],
-      [
-        "2018-10-13",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-20"
-      ],
-      [
-        "2018-10-20",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-27"
-      ],
-      [
-        "2018-10-27",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-03"
-      ],
-      [
-        "2018-11-03",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-10"
-      ],
-      [
-        "2018-11-10",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-17"
-      ],
-      [
-        "2018-11-17",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-24"
-      ],
-      [
-        "2018-11-24",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-01"
-      ],
-      [
-        "2018-12-01",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-08"
-      ],
-      ["2018-12-08", "0.2% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "0.53% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "1.47% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "6.27% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "9.53% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "23.93% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "20.93% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "21.27% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "9.4% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "2.67% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "2.2% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "0.93% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "0.4% probability of flu peaking", "2019-03-09"],
-      [
-        "2019-03-09",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-16"
-      ],
-      [
-        "2019-03-16",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-23"
-      ],
-      [
-        "2019-03-23",
-        "Less than 0.001% probability of flu peaking",
-        "2019-03-30"
-      ],
-      [
-        "2019-03-30",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-06"
-      ],
-      [
-        "2019-04-06",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-13"
-      ],
-      [
-        "2019-04-13",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-20"
-      ],
-      [
-        "2019-04-20",
-        "Less than 0.001% probability of flu peaking",
-        "2019-04-27"
-      ],
-      [
-        "2019-04-27",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-04"
-      ],
-      [
-        "2019-05-04",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-11"
-      ],
-      [
-        "2019-05-11",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-18"
-      ],
-      [
-        "2019-05-18",
-        "Less than 0.001% probability of flu peaking",
-        "2019-05-25"
-      ]
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0.20% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "0.53% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "1.47% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "6.27% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "9.53% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "23.93% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "20.93% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "21.27% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "9.40% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "2.67% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "2.20% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "0.93% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "0.40% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "0.07% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "0.07% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.07% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.07% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2753,8 +2323,8 @@ var dataset = [
       "0% probability of flu peaking": { color: "#F0F0F0" },
       "0.25% probability of flu peaking": { color: "#FFF7BC" },
       "0.75% probability of flu peaking": { color: "#FFF7BC" },
-      "1.00% probability of flu peaking": { color: "#FFF7BC" },
       "1.50% probability of flu peaking": { color: "#FFF7BC" },
+      "1% probability of flu peaking": { color: "#FFF7BC" },
       "2.01% probability of flu peaking": { color: "#FFF7BC" },
       "2.26% probability of flu peaking": { color: "#FFF7BC" },
       "2.76% probability of flu peaking": { color: "#FFF7BC" },
@@ -2770,39 +2340,39 @@ var dataset = [
       "9.77% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
+      ["2018-10-20", "0.75% probability of flu peaking", "2018-10-27"],
       ["2018-10-27", "0.75% probability of flu peaking", "2018-11-03"],
       ["2018-11-03", "0.75% probability of flu peaking", "2018-11-10"],
       ["2018-11-10", "0.75% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.75% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "1.00% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "2.26% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "3.01% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "4.01% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "3.51% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "3.76% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "4.76% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "3.76% probability of flu peaking", "2019-01-19"],
+      ["2018-11-17", "1% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "2.26% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "3.01% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "4.01% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "3.51% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "3.76% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "4.76% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "3.76% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "8.02% probability of flu peaking", "2019-01-19"],
       ["2019-01-19", "8.02% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "8.02% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "7.27% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "9.02% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "8.52% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "9.77% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "7.27% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "2.76% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "2.01% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "3.01% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "2.76% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "1.50% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.25% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
+      ["2019-01-26", "7.27% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "9.02% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "8.52% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "9.77% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "7.27% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "2.76% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "2.01% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "3.01% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "2.76% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "1.50% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.25% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.25% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0.25% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0.25% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.25% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2811,6 +2381,9 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/UniMelb",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
+      "0.01% probability of flu peaking": { color: "#FFF7BC" },
+      "0.02% probability of flu peaking": { color: "#FFF7BC" },
+      "0.08% probability of flu peaking": { color: "#FFF7BC" },
       "0.14% probability of flu peaking": { color: "#FFF7BC" },
       "0.21% probability of flu peaking": { color: "#FFF7BC" },
       "0.32% probability of flu peaking": { color: "#FFF7BC" },
@@ -2826,7 +2399,6 @@ var dataset = [
       "3.49% probability of flu peaking": { color: "#FFF7BC" },
       "4.60% probability of flu peaking": { color: "#FFF7BC" },
       "4.71% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "10.09% probability of flu peaking": { color: "#FEC44F" },
       "5.84% probability of flu peaking": { color: "#FEC44F" },
       "6.09% probability of flu peaking": { color: "#FEC44F" },
@@ -2838,51 +2410,39 @@ var dataset = [
       "9.39% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
       ["2018-10-27", "0% probability of flu peaking", "2018-11-03"],
       ["2018-11-03", "0% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0% probability of flu peaking", "2018-11-17"],
-      [
-        "2018-11-17",
-        "Less than 0.001% probability of flu peaking",
-        "2018-11-24"
-      ],
-      [
-        "2018-11-24",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-01"
-      ],
-      [
-        "2018-12-01",
-        "Less than 0.001% probability of flu peaking",
-        "2018-12-08"
-      ],
-      ["2018-12-08", "0.14% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "0.32% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "0.63% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "1.27% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "1.72% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "3.19% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "4.60% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "6.09% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "7.99% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "9.25% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "9.30% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "10.09% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "9.39% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "8.46% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "7.48% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "5.84% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "4.71% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "3.49% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "2.27% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "1.60% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "0.90% probability of flu peaking", "2019-05-04"],
-      ["2019-05-04", "0.64% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.33% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0.21% probability of flu peaking", "2019-05-25"]
+      ["2018-11-10", "0.01% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.02% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.08% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "0.14% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "0.32% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "0.63% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "1.27% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "1.72% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "3.19% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "4.60% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "6.09% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "7.99% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "9.25% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "9.30% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "10.09% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "9.39% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "8.46% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "7.48% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "5.84% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "4.71% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "3.49% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "2.27% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "1.60% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.90% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.64% probability of flu peaking", "2019-05-04"],
+      ["2019-05-04", "0.33% probability of flu peaking", "2019-05-11"],
+      ["2019-05-11", "0.21% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2890,6 +2450,7 @@ var dataset = [
     measure_url:
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/UnwghtAvg",
     categories: {
+      "0.03% probability of flu peaking": { color: "#FFF7BC" },
       "0.19% probability of flu peaking": { color: "#FFF7BC" },
       "0.21% probability of flu peaking": { color: "#FFF7BC" },
       "0.23% probability of flu peaking": { color: "#FFF7BC" },
@@ -2912,7 +2473,6 @@ var dataset = [
       "3.03% probability of flu peaking": { color: "#FFF7BC" },
       "3.25% probability of flu peaking": { color: "#FFF7BC" },
       "3.63% probability of flu peaking": { color: "#FFF7BC" },
-      "Less than 0.001% probability of flu peaking": { color: "#FFF7BC" },
       "10.10% probability of flu peaking": { color: "#FEC44F" },
       "16.51% probability of flu peaking": { color: "#FEC44F" },
       "5.47% probability of flu peaking": { color: "#FEC44F" },
@@ -2924,43 +2484,39 @@ var dataset = [
       "9.60% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
-      [
-        "2018-10-06",
-        "Less than 0.001% probability of flu peaking",
-        "2018-10-13"
-      ],
-      ["2018-10-13", "0.19% probability of flu peaking", "2018-10-20"],
-      ["2018-10-20", "0.29% probability of flu peaking", "2018-10-27"],
-      ["2018-10-27", "0.69% probability of flu peaking", "2018-11-03"],
-      ["2018-11-03", "0.34% probability of flu peaking", "2018-11-10"],
-      ["2018-11-10", "0.26% probability of flu peaking", "2018-11-17"],
-      ["2018-11-17", "0.31% probability of flu peaking", "2018-11-24"],
-      ["2018-11-24", "0.45% probability of flu peaking", "2018-12-01"],
-      ["2018-12-01", "0.58% probability of flu peaking", "2018-12-08"],
-      ["2018-12-08", "1.20% probability of flu peaking", "2018-12-15"],
-      ["2018-12-15", "2.32% probability of flu peaking", "2018-12-22"],
-      ["2018-12-22", "3.03% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "16.51% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "6.82% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "5.47% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "7.09% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "6.58% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "10.10% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "9.60% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "9.12% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "5.91% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "3.63% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "3.25% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "2.12% probability of flu peaking", "2019-03-23"],
-      ["2019-03-23", "0.88% probability of flu peaking", "2019-03-30"],
-      ["2019-03-30", "0.59% probability of flu peaking", "2019-04-06"],
-      ["2019-04-06", "0.33% probability of flu peaking", "2019-04-13"],
-      ["2019-04-13", "0.21% probability of flu peaking", "2019-04-20"],
-      ["2019-04-20", "0.25% probability of flu peaking", "2019-04-27"],
-      ["2019-04-27", "0.23% probability of flu peaking", "2019-05-04"],
+      ["2018-09-29", "0.03% probability of flu peaking", "2018-10-06"],
+      ["2018-10-06", "0.19% probability of flu peaking", "2018-10-13"],
+      ["2018-10-13", "0.29% probability of flu peaking", "2018-10-20"],
+      ["2018-10-20", "0.69% probability of flu peaking", "2018-10-27"],
+      ["2018-10-27", "0.34% probability of flu peaking", "2018-11-03"],
+      ["2018-11-03", "0.26% probability of flu peaking", "2018-11-10"],
+      ["2018-11-10", "0.31% probability of flu peaking", "2018-11-17"],
+      ["2018-11-17", "0.45% probability of flu peaking", "2018-11-24"],
+      ["2018-11-24", "0.58% probability of flu peaking", "2018-12-01"],
+      ["2018-12-01", "1.20% probability of flu peaking", "2018-12-08"],
+      ["2018-12-08", "2.32% probability of flu peaking", "2018-12-15"],
+      ["2018-12-15", "3.03% probability of flu peaking", "2018-12-22"],
+      ["2018-12-22", "16.51% probability of flu peaking", "2018-12-29"],
+      ["2018-12-29", "6.82% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "5.47% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "7.09% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "6.58% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "10.10% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "9.60% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "9.12% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "5.91% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "3.63% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "3.25% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "2.12% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0.88% probability of flu peaking", "2019-03-23"],
+      ["2019-03-23", "0.59% probability of flu peaking", "2019-03-30"],
+      ["2019-03-30", "0.33% probability of flu peaking", "2019-04-06"],
+      ["2019-04-06", "0.21% probability of flu peaking", "2019-04-13"],
+      ["2019-04-13", "0.25% probability of flu peaking", "2019-04-20"],
+      ["2019-04-20", "0.23% probability of flu peaking", "2019-04-27"],
+      ["2019-04-27", "0.38% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0.38% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0.38% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0.86% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0.86% probability of flu peaking", "2019-05-18"]
     ]
   },
   {
@@ -2969,17 +2525,18 @@ var dataset = [
       "https://github.com/cdcepi/FluSight-forecasts/tree/master/2018-2019/YaleModel",
     categories: {
       "0% probability of flu peaking": { color: "#F0F0F0" },
-      "10.7% probability of flu peaking": { color: "#FEC44F" },
-      "12.2% probability of flu peaking": { color: "#FEC44F" },
-      "6.5% probability of flu peaking": { color: "#FEC44F" },
-      "7.1% probability of flu peaking": { color: "#FEC44F" },
-      "7.6% probability of flu peaking": { color: "#FEC44F" },
-      "7.7% probability of flu peaking": { color: "#FEC44F" },
-      "8.3% probability of flu peaking": { color: "#FEC44F" },
-      "8.6% probability of flu peaking": { color: "#FEC44F" },
-      "9.9% probability of flu peaking": { color: "#FEC44F" }
+      "10.70% probability of flu peaking": { color: "#FEC44F" },
+      "12.20% probability of flu peaking": { color: "#FEC44F" },
+      "6.50% probability of flu peaking": { color: "#FEC44F" },
+      "7.10% probability of flu peaking": { color: "#FEC44F" },
+      "7.60% probability of flu peaking": { color: "#FEC44F" },
+      "7.70% probability of flu peaking": { color: "#FEC44F" },
+      "8.30% probability of flu peaking": { color: "#FEC44F" },
+      "8.60% probability of flu peaking": { color: "#FEC44F" },
+      "9.90% probability of flu peaking": { color: "#FEC44F" }
     },
     data: [
+      ["2018-09-29", "0% probability of flu peaking", "2018-10-06"],
       ["2018-10-06", "0% probability of flu peaking", "2018-10-13"],
       ["2018-10-13", "0% probability of flu peaking", "2018-10-20"],
       ["2018-10-20", "0% probability of flu peaking", "2018-10-27"],
@@ -2992,18 +2549,18 @@ var dataset = [
       ["2018-12-08", "0% probability of flu peaking", "2018-12-15"],
       ["2018-12-15", "0% probability of flu peaking", "2018-12-22"],
       ["2018-12-22", "0% probability of flu peaking", "2018-12-29"],
-      ["2018-12-29", "0% probability of flu peaking", "2019-01-05"],
-      ["2019-01-05", "7.6% probability of flu peaking", "2019-01-12"],
-      ["2019-01-12", "6.5% probability of flu peaking", "2019-01-19"],
-      ["2019-01-19", "7.7% probability of flu peaking", "2019-01-26"],
-      ["2019-01-26", "8.3% probability of flu peaking", "2019-02-02"],
-      ["2019-02-02", "10.7% probability of flu peaking", "2019-02-09"],
-      ["2019-02-09", "9.9% probability of flu peaking", "2019-02-16"],
-      ["2019-02-16", "12.2% probability of flu peaking", "2019-02-23"],
-      ["2019-02-23", "10.7% probability of flu peaking", "2019-03-02"],
-      ["2019-03-02", "10.7% probability of flu peaking", "2019-03-09"],
-      ["2019-03-09", "8.6% probability of flu peaking", "2019-03-16"],
-      ["2019-03-16", "7.1% probability of flu peaking", "2019-03-23"],
+      ["2018-12-29", "7.60% probability of flu peaking", "2019-01-05"],
+      ["2019-01-05", "6.50% probability of flu peaking", "2019-01-12"],
+      ["2019-01-12", "7.70% probability of flu peaking", "2019-01-19"],
+      ["2019-01-19", "8.30% probability of flu peaking", "2019-01-26"],
+      ["2019-01-26", "10.70% probability of flu peaking", "2019-02-02"],
+      ["2019-02-02", "9.90% probability of flu peaking", "2019-02-09"],
+      ["2019-02-09", "12.20% probability of flu peaking", "2019-02-16"],
+      ["2019-02-16", "10.70% probability of flu peaking", "2019-02-23"],
+      ["2019-02-23", "10.70% probability of flu peaking", "2019-03-02"],
+      ["2019-03-02", "8.60% probability of flu peaking", "2019-03-09"],
+      ["2019-03-09", "7.10% probability of flu peaking", "2019-03-16"],
+      ["2019-03-16", "0% probability of flu peaking", "2019-03-23"],
       ["2019-03-23", "0% probability of flu peaking", "2019-03-30"],
       ["2019-03-30", "0% probability of flu peaking", "2019-04-06"],
       ["2019-04-06", "0% probability of flu peaking", "2019-04-13"],
@@ -3011,8 +2568,7 @@ var dataset = [
       ["2019-04-20", "0% probability of flu peaking", "2019-04-27"],
       ["2019-04-27", "0% probability of flu peaking", "2019-05-04"],
       ["2019-05-04", "0% probability of flu peaking", "2019-05-11"],
-      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"],
-      ["2019-05-18", "0% probability of flu peaking", "2019-05-25"]
+      ["2019-05-11", "0% probability of flu peaking", "2019-05-18"]
     ]
   }
 ];
@@ -3042,43 +2598,24 @@ $(window).resize(function() {
     <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW43.html">43</a></li>
     <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW44.html">44</a></li>
     <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW45.html">45</a></li>
+    <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW46.html">46</a></li>
+    <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW47.html">47</a></li>
+    <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW48.html">48</a></li>
+    <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW49.html">49</a></li>
+    <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW50.html">50</a></li>
+    <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW51.html">51</a></li>
+    <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW52.html">52</a></li>
     <li class="page-item"><a class="page-link" href="https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW43.html">Next</a></li>
-    <!--        <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW46.html">46</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW47.html">47</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW48.html">48</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW49.html">49</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW50.html">50</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW51.html">51</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW52.html">52</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW01.html">01</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW02.html">02</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW03.html">03</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW04.html">04</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW05.html">05</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW06.html">06</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW07.html">07</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW08.html">08</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW09.html">09</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW10.html">10</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW11.html">11</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW12.html">12</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW13.html">13</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW14.html">14</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW15.html">15</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW16.html">16</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW17.html">17</a></li>
-    <li class="page-item"><a class="page-link" https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW18.html">18</a></li>
-    !-->
+  </ul>
   </ul>
 </nav>
-</div>
 <br>
 <div style="margin: 0 auto; width: 95%;padding: 10px" align="justify">
           <footer class="footer">
             <p>* This visualization displays forecasts submitted to the <a href="https://www.cdc.gov" rel="nofollow">Centers for Disease Control and Prevention (CDC)</a> as part of the <a href="https://predict.cdc.gov/" rel="nofollow">FluSight</a> influenza forecasting challenge for the 2018-2019 flu season. Multiple outside research teams have developed different models that provide flu activity forecasts to CDC, and more information and visualizations of forecasts can be found on the FluSight <a href="https://predict.cdc.gov/post/5ba1504e5619f003acb7e18f" rel="nofollow">website</a> and <a href="https://github.com/cdcepi/FluSight-forecasts" rel="nofollow">GitHub repo</a>. Peak week, the primary variable shown above, is the week with the highest percentage of outpatient visits for influenza-like illness (i.e. the week of the season when flu activity is the greatest). More precisely, it is defined as the <a href="https://www.cdc.gov/mmwr/index.html" rel="nofollow">MMWR</a> surveillance week in which the weighted <a href="https://www.cdc.gov/flu/weekly/overview.htm#anchor_1539281266932/"rel="nofollow">ILINet</a> percentage, rounded to one decimal place, is the highest for the influenza season. Accurate and timely forecasts for the peak week can be useful for planning and promoting activities to increase influenza vaccination prior to the bulk of influenza illness. For healthcare, pharmacy, and public health authorities, a forecast for the peak week can guide efficient staff and resource allocation. To that end, this tool is being provided as a resource for interpreting and visualizing forecasts.</p>
             <p>DISCLAIMER: These are not CDC nor IQT Labs forecasts and that the model results on this page are not endorsed or approved by CDC or IQT Labs. These forecasts are based on different models, can vary significantly, and may be inaccurate. These forecasts and data are provided “as is” with no warranties of any kind, and use of this information is at your sole risk. To the maximum extent provided by law, neither IQT Labs and its affiliates nor any government agency or third party shall be liable for any damages of any kind relating to or resulting from use of the information on this site. For more information visit <a href="https://www.iqt.org/terms-of-use/" rel="nofollow">https://www.iqt.org/terms-of-use/.</a> Anyone interested in using these data for additional research or publications is requested to contact <a href="mailto:flucontest@cdc.gov">flucontest&#64;cdc.gov</a> for information regarding attribution of the source forecasts.</p>
             <p>Built using a combination of <a href="https://github.com/flrs/visavail/" rel="nofollow">visavail.js,</a> <a href="http://colorbrewer2.org/" rel="nofollow">Colorbrewer 2.0,</a> and other open-source tools as a joint effort by <a href="https://www.bnext.org/" rel="nofollow">B.Next</a> and the IQT Labs Design and Data Visualization team</a>.</p>
-            <p>© 2018 <a href="https://www.iqt.org/labs/">IQT Labs LLC,</a> a wholly owned research venture of <a href="https://www.iqt.org/">In-Q-Tel, Inc.</a></p>
+            <p>&#169; 2018-2019 <a href="https://www.iqt.org/labs/">IQT Labs LLC,</a> a wholly owned research venture of <a href="https://www.iqt.org/">In-Q-Tel, Inc.</a></p>
           </footer>
 </div>
 </body>
