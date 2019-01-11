@@ -1,7 +1,7 @@
 Viziflu v.1.14
 =============================
 
-Viziflu is a visualization tool that displays multiple predictions about the timing of "U.S. National"/"Peak Week," the week with the highest predicted number of flu cases, using the results of forecasts submitted to the Centers for Disease Control and Prevention (CDC) as part of the agency's annual [FluSight influenza forecasting challenge](https://github.com/cdcepi/FluSight-forecasts). By displaying the outputs of multiple influenza models and allowing users to compare the uncertainty across those models, Viziflu can help make influenza forecasts more actionable for decision-makers. 
+Viziflu is a visualization tool that displays multiple predictions about the timing of ```"U.S. National"/"Peak Week,"``` the week with the highest predicted number of flu cases, using the results of forecasts submitted to the Centers for Disease Control and Prevention (CDC) as part of the agency's annual [FluSight influenza forecasting challenge](https://github.com/cdcepi/FluSight-forecasts). By displaying the outputs of multiple influenza models and allowing users to compare the uncertainty across those models, Viziflu can help make influenza forecasts more actionable for decision-makers. 
 
 If you would like to explore Viziflu peak week visualizations, you can click [here](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts/EW43.html) [![2017-2018](https://img.shields.io/badge/2017--2018-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts/EW43.html) to access a fully working demo of last year's flu season. Or click [here](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW42.html) [![2018-2019](https://img.shields.io/badge/2018--2019-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW42.html) if you’re curious to see early season forecasts for the current (2018–2019) season.*
 
@@ -16,7 +16,7 @@ Background
 
 Viziflu was developed following a B.Next Roundtable and whitepaper on Technology to advance infectious disease forecasting for outbreak management that identified the need for improved communication about public health data, including new visualization techniques that help convey risks and uncertainties to decision-makers and the public, with the Centers for Disease Control and Prevention (CDC) Influenza Division providing valuable feedback and domain expertise.
 
-Data Availability for ```"U.S. National"/"Peak Week,"``` (Current Season) [![2018-2019](https://img.shields.io/badge/2018--2019-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW42.html)
+Data Availability for "U.S. National"/"Peak Week," (Current Season) [![2018-2019](https://img.shields.io/badge/2018--2019-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts/EW42.html)
 -----------
 
 |Team/EW|42|43|44|45|46|47|48|49|50|51|52|
@@ -60,7 +60,7 @@ Data Availability for ```"U.S. National"/"Peak Week,"``` (Current Season) [![201
 |UnwghtAvg|```✔```|```✔```|```✔```|```✔```|```✔```|```✔```|```✔```|```✔```|```✔```|```✔```|```✔```|
 |Yale|```✔```|```✔```|```✔```|```✔```|```✔```|```✔```|```✔```|```✔```|⛔|```✔```|```✔```|
 
-Data Availability (Previous Season) for ```"U.S. National"/"Peak Week,"``` [![2017-2018](https://img.shields.io/badge/2017--2018-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts/EW43.html)
+Data Availability (Previous Season) for "U.S. National"/"Peak Week," [![2017-2018](https://img.shields.io/badge/2017--2018-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts/EW43.html)
 -----------
 
 |Team/EW|43|44|45|46|47|48|49|50|51|52|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|
