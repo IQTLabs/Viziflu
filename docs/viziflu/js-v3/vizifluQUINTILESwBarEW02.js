@@ -238,14 +238,6 @@ function vizifluChart() {
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-      // create EW marker
-      svg
-        .append("rect")
-        .attr("width", "0.1%")
-        .attr("x", 0.42424242 * width)
-        .attr("height", "88.5%")
-        .attr("fill", "#464646");
-
       // create basic element groups
       svg.append("g").attr("id", "g_title");
       svg.append("g").attr("id", "g_axis");
@@ -511,7 +503,15 @@ function vizifluChart() {
           }
         });
       }
-
+      
+      // create EW marker
+      svg
+        .append("rect")
+        .attr("width", "0.1%")
+        .attr("x", 0.42424242 * width)
+        .attr("height", "88.5%")
+        .attr("fill", "#464646");
+      
       // create title
       if (drawTitle) {
         svg
