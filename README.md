@@ -1,6 +1,3 @@
-Viziflu v.1.14
-=============================
-
 <a href="https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v2/EW43.html"><img src="./docs/images/viziflu-logo.svg"></a>
 
 Viziflu is a visualization tool that displays multiple predictions about the timing of ```"U.S. National"/"Peak Week,"``` the week with the highest predicted number of flu cases, using the results of forecasts submitted to the Centers for Disease Control and Prevention (CDC) as part of the agency's annual [FluSight influenza forecasting challenge](https://github.com/cdcepi/FluSight-forecasts). By displaying the outputs of multiple influenza models and allowing users to compare the uncertainty across those models, Viziflu can help make influenza forecasts more actionable for decision-makers.
