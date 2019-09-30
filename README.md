@@ -1,7 +1,9 @@
 Viziflu v.1.14
 =============================
 
-Viziflu is a visualization tool that displays multiple predictions about the timing of ```"U.S. National"/"Peak Week,"``` the week with the highest predicted number of flu cases, using the results of forecasts submitted to the Centers for Disease Control and Prevention (CDC) as part of the agency's annual [FluSight influenza forecasting challenge](https://github.com/cdcepi/FluSight-forecasts). By displaying the outputs of multiple influenza models and allowing users to compare the uncertainty across those models, Viziflu can help make influenza forecasts more actionable for decision-makers. 
+<a href="https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v2/EW43.html"><img src="https://raw.githubusercontent.com/BNext-IQT/Viziflu/master/docs/images/Viziflu%20Logo.png" alt="Viziflu logo" /></a>
+
+Viziflu is a visualization tool that displays multiple predictions about the timing of ```"U.S. National"/"Peak Week,"``` the week with the highest predicted number of flu cases, using the results of forecasts submitted to the Centers for Disease Control and Prevention (CDC) as part of the agency's annual [FluSight influenza forecasting challenge](https://github.com/cdcepi/FluSight-forecasts). By displaying the outputs of multiple influenza models and allowing users to compare the uncertainty across those models, Viziflu can help make influenza forecasts more actionable for decision-makers.
 
 If you would like to explore Viziflu peak week visualizations, you can click [here](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v2/EW43.html) [![2017-2018](https://img.shields.io/badge/2017--2018-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v2/EW43.html) to access a fully working demo of last year's flu season. Or click [here](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts-v2/EW42.html) [![2018-2019](https://img.shields.io/badge/2018--2019-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts-v2/EW42.html) if you’re curious to see early season forecasts for the current (2018–2019) season.*
 
@@ -107,7 +109,7 @@ MMWR to ISO 8601 Conversion
 
 Disclaimer
 -------
-Multiple outside research teams have developed different models that provide flu activity forecasts to CDC, and more information and visualizations of forecasts can be found on the [FluSight website](https://predict.cdc.gov/post/5ba1504e5619f003acb7e18f) and [GitHub repo](https://github.com/cdcepi/FluSight-forecasts). 
+Multiple outside research teams have developed different models that provide flu activity forecasts to CDC, and more information and visualizations of forecasts can be found on the [FluSight website](https://predict.cdc.gov/post/5ba1504e5619f003acb7e18f) and [GitHub repo](https://github.com/cdcepi/FluSight-forecasts).
 
 > N.B. These are not CDC nor IQT Labs forecasts and that the model results on this page are not endorsed or approved by CDC or IQT Labs. These forecasts are based on different models, can vary significantly, and may be inaccurate. These forecasts and data are provided “as is” with no warranties of any kind, and use of this information is at your sole risk. To the maximum extent provided by law, neither IQT Labs and its affiliates nor any government agency or third party shall be liable for any damages of any kind relating to or resulting from use of the information on this site. For more information visit https://www.iqt.org/terms-of-use/. Anyone interested in using these data for additional research or publications is requested to contact flucontest@cdc.gov for information regarding attribution of the source forecasts.
 
