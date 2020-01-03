@@ -127,6 +127,5 @@ _|    _|  _|        _|    _|  _|        _|    _|  _|              _|          _|
 _|    _|  _|        _|    _|    _|_|_|  _|    _|  _|_|_|_|      _|_|_|_|  _|    _|    
 
 
-
 ```
 Viziflu is available to the public under the [Apache 2.0 License](https://github.com/BNext-IQT/Viziflu/blob/master/LICENSE).
