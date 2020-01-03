@@ -120,10 +120,6 @@ Copyright :copyright: 2018-2020 [IQT Labs LLC](https://www.iqt.org/labs/), a who
 -------
 ```ascii
 
-You can copy & paste this ascii graphic and use it e.g. as mail signature
-
-Font: block   Reflection: no   Adjustment: left   Stretch: no      Width: 100	 Text: APACHE 2.0
-
   _|_|    _|_|_|      _|_|      _|_|_|  _|    _|  _|_|_|_|        _|_|          _|    
 _|    _|  _|    _|  _|    _|  _|        _|    _|  _|            _|    _|      _|  _|  
 _|_|_|_|  _|_|_|    _|_|_|_|  _|        _|_|_|_|  _|_|_|            _|        _|  _|  
