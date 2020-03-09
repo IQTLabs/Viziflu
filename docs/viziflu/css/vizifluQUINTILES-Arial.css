@@ -29,7 +29,7 @@
 
 /*
 
-.no_chance_peakweek_forecast_data:hover {s
+.no_chance_peakweek_forecast_data:hover {
     fill: #FFBA60;
 }
 
@@ -86,7 +86,7 @@
 div.tooltip {
     position: absolute;
     text-align: left;
-    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     font-size: 10px;
     padding-left: 0;
@@ -106,7 +106,7 @@ div.tooltip {
 .ytitle {
     /* y axis labels */
     dominant-baseline: middle;
-    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     font-size: 12px;
 }
@@ -124,47 +124,47 @@ div.tooltip {
 
 .axis text {
     font-size: 12px;
-    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     fill: #777;
 }
 
 .vert_grid {
     fill: none;
-    stroke: red;
+    stroke: #b0b0b0;
     stroke-width: 1px;
 }
 
 .vert_grid_emph {
     fill: none;
-    stroke: #dddddd;
+    stroke: #b0b0b0;
     stroke-width: 2px;
 }
 
 .horz_grid {
     fill: none;
-    stroke: #dddddd;
+    stroke: #b0b0b0;
     stroke-width: 1px;
 }
 
 .heading {
     font-size: 16px;
-    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     font-weight: bold;
 }
 
 .subheading {
     font-size: 12px;
-    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     fill: #777;
 }
 
 .legend {
     dominant-baseline: middle;
-    font-size: 12px;
-    font-family: "IBM Plex Sans", "Helvetica", Arial, sans-serif;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     fill: #777;
 }
