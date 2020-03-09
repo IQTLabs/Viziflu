@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>U.S. Peak Week Skill Scores, 2017-18</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" type='text/css'>
+	    <script src="https://use.fontawesome.com/8321cacbf6.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body {font-family: 'IBM Plex Sans', sans-serif;}
+.ribbon {
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#B6BAC9 0%, #808080 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #808080;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #808080;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #808080;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #808080;
+}
+
+    </style>
+</head>
+<body>
+	   <div class="ribbon"><span>2017-18</span></div>
+    <div>
+			<br>
+			<h1>&nbsp;<i class="fa fa-bullseye"></i>&nbsp;How well did U.S. peak week forecasts perform in 2017-18?</h1>
+      <p style="margin: 0 auto; width: 95%;padding: 10px">The charts below show <b style="color:red">forecast skill scores</b> for each model submitted to the CDC FluSight Challenge, focusing only on forecasts of U.S. peak week. Forecast skill is based on both accuracy (log scores) and confidence (distributional sharpness) over the entire season. It varies as modeling teams update their forecasts each week.</p>
+    </div>
+    <div>
+			<script>
+				var smallMultipleSize = [300, 300];
+
+var margin = { top: 30, right: 10, bottom: 30, left: 40 },
+  width = +smallMultipleSize[0] - margin.left - margin.right,
+  height = +smallMultipleSize[1] - margin.top - margin.bottom;
+
+
+var unity = [1];
+
+// parse day, abbreviated month name, year without century
+var parseTime = d3.timeParse("%d-%b-%y");
+
+var x = d3
+  .scaleTime()
+  .domain([0, 1])
+  .rangeRound([0, width]);
+
+var y = d3.scaleLinear().rangeRound([height, 0]);
+
+// areas are defined by two bounding lines - here the x value is the same for both
+// the y values, y0 and y1 differ
+// see https://github.com/d3/d3-shape#areas for API reference
+var area = d3
+  .area()
+  .x(function(d) {
+    return x(d.Date);
+  })
+  .y1(function(d) {
+    return y(d.Skillscore);
+  })
+  // bottom coordinate of area will always be zero
+  .y0(y(0));
+
+// Add a line to the top of the area
+var line = d3
+  .line()
+  .x(function(d) {
+    return x(d.Date);
+  })
+  .y(function(d) {
+    return y(d.Skillscore);
+  });
+
+var series = [
+{name: "LANL DBMplus", file: "LANL-DBM-plus_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "LANL DBM", file: "LANL-DBM_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "CU Puffins", file: "CU_Puffins_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "PredSci", file: "PredSci_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "FluSight Network", file: "FluSight_Network_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "KoT", file: "KoT_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "CU Vixen", file: "CU_Vixen_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "4Sight2", file: "4Sight2_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "Unwght Avg.", file: "Unwght_Avg_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "CU Network", file: "CU_Network_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "Yale", file: "Yale_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "Hist. Avg.", file: "Hist_Avg_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "02115_emmsa", file: "02115_emmsa_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "02115_emm", file: "02115_emm_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "02115_emms", file: "02115_emms_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "KBSI", file: "KBSI_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "NEU GLEAM", file: "NEU-GLEAM_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "PPFST Crowd", file: "PPFST_Crowd_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "UMNSpl", file: "UMNSpl_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "Delphi Stat.", file: "Delphi-Stat_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "Team GA", file: "Team_GA_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "CU SEL", file: "CU_SEL_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "UA I", file: "UA_I_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "Delphi Epicast", file: "Delphi-Epicast_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "HumNat", file: "HumNat_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "Team A", file: "Team_A_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "UA Epiflu", file: "UA_Epiflu_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "KPWHRI", file: "KPWHRI_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "ARETE", file: "ARETE_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "ISU", file: "ISU_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "Tulane", file: "Tulane_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "UniMelb", file: "UoM_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "4Sight", file: "4Sight_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "FluSight Avg.", file: "FluSight_Avg_2017-18_natl_pkwk.csv", color: "#4bb0d1"},
+{name: "UCSF3", file: "UCSF3_2017-18_natl_pkwk.csv", color: "#4bb0d1"}
+];
+
+// queue for all series
+var queue = d3.queue();
+
+for (var s in series) {
+  queue.defer(d3.csv, series[s].file);
+}
+queue.awaitAll(ready);
+
+function ready(error, results) {
+  for (var s in series) {
+    drawChart(series[s].name, results[s]);
+  }
+}
+
+function drawChart(name, results) {
+  var data = results.map(function(d) {
+    d.Date = parseTime(d.Date);
+    d.Skillscore = +d.Skillscore;
+    return d;
+  });
+
+  x.domain(
+    d3.extent(data, function(d) {
+      return d.Date;
+    })
+  );
+  y.domain([
+    0,
+    d3.max(unity)
+  ]);
+
+  var svg = d3
+    .select("body")
+    .append("svg")
+    .attr("width", smallMultipleSize[0])
+    .attr("height", smallMultipleSize[1])
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  svg
+    .append("path")
+    .datum(data)
+    .attr("fill", function() {
+      for (var i in series) {
+        if (series[i].name === name) {
+          return series[i].color;
+        }
+      }
+    })
+    .attr("d", area);
+
+  // add line to top of area
+  svg
+    .append("path")
+    .datum(data)
+    .attr("fill", "none")
+    .attr("stroke", "#4bb0d1")
+    .attr("d", line);
+
+  // add line to the right of the area
+  svg
+    .append("line")
+    .attr("x1", x.range()[1])
+    .attr("y1", 0)
+    .attr("x2", x.range()[1])
+    .attr("y2", y.range()[0])
+    .attr("fill", "none")
+    .attr("stroke", "#000");
+
+		    // add observed peak week
+    svg.append("line")
+      .attr("x1", (x.range()[1]/1.93))
+      .attr("y1", 0)
+      .attr("x2", (x.range()[1]/1.93))
+      .attr("y2", (y.range()[0]))
+      .attr("fill", "none")
+      .attr("stroke", "#000")
+
+  // add Hist-Avg. dotted line for reference
+  svg
+    .append("line")
+    .attr("x1", 0)
+    .attr("y1", 0.59 * y.range()[0])
+    .attr("x2", x.range()[1])
+    .attr("y2", 0.59 * y.range()[0])
+    .attr("fill", "none")
+    .attr("stroke", "#000")
+    .style("stroke-dasharray", "3, 3");
+
+  svg
+    .append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).ticks(4))
+	  .style("font-family", "IBM Plex Sans")
+    .style("font-size", "8.25");
+
+  svg
+    .append("g")
+    .call(
+      d3
+        .axisLeft(y)
+        .tickSizeOuter(0)
+        .ticks(5)
+    )
+		.style("font-family", "IBM Plex Sans")
+    .style("font-size", "10")
+    .append("text")
+    .attr("fill", "#000")
+    .attr("y", 6)
+    .attr("x", 0)
+    .attr("dx", "0.71em")
+    .attr("text-anchor", "start")
+    .text("Skill Score")
+		.append('svg:tspan')
+    .attr('x', 7)
+    .attr('dy', 12)
+    .text(name +" Model")
+		.append('svg:tspan')
+    .attr('x', 7)
+    .attr('dy', 118)
+    .text("Hist. Avg.")
+		.style("font-family", "IBM Plex Sans")
+    .style("font-size", "10")
+
+svg
+	.append("text")
+  .attr("id", "title")
+  .attr("font-size", 9)
+  .attr("style", "fill: #000")
+	.append('svg:tspan')
+  .attr("x", 85)
+  .attr("y", 270)
+	.text("Forecast Date")
+
+svg.append("text")
+  .attr("x", (x.range()[1]/1.8))
+  .attr("y", 35)
+  .attr("id", "title")
+  .attr("font-size", 10)
+  .attr("style", "fill: #000; writing-mode: tb; glyph-orientation-vertical: 0")
+  .text("Observed Peak Week, U.S.");
+
+}
+			</script>
+    </div>
+	</body>
+
+</html>
