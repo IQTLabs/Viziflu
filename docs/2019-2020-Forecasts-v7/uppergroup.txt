@@ -1,0 +1,36 @@
+{
+  measure: "Guidehouse-B",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "PSI-s",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "LANL-DBMplus",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "KoT",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "BioFire FLI",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "FluSightNetwork",
+  measure_url: "",
+    categories: {},
+    data: []
+},

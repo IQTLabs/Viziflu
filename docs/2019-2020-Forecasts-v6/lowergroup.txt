@@ -1,0 +1,115 @@
+{
+  measure: "Tulane",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "PPFST",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "UMNSpl",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "UnwghtAvg",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "ISU",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "Protea-Cheetah",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "Delphi-Stat",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "CU-Network",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "Yale",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "Hist-Avg",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "CEID",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "KBSI",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "FluX",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "UA_EpiCos",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "KPWHRI",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "EpiDeep",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "FluOutlook-Mech",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "UniMelb",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+{
+  measure: "ARGO",
+  measure_url: "",
+    categories: {},
+    data: []
+},
+
