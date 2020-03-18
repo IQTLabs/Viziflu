@@ -1,13 +1,19 @@
 Background on Viziflu
 ======
 
-<a href="https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v2/EW43.html"><img src="./docs/images/viziflu-logo.svg" width="700"></a>
+<a href="https://bnext-iqt.github.io/Viziflu/"><img src="./docs/images/viziflu-logo.svg" width="700"></a>
 
 Viziflu is a visualization tool that displays multiple predictions about the timing of ```"U.S. National"/"Peak Week,"``` the week with the highest predicted number of flu cases, using the results of forecasts submitted to the Centers for Disease Control and Prevention (CDC) as part of the agency's annual [FluSight influenza forecasting challenge](https://github.com/cdcepi/FluSight-forecasts). By displaying the outputs of multiple influenza models and allowing users to compare the uncertainty across those models, Viziflu can help make influenza forecasts more actionable for decision-makers.
 
-If you would like to explore Viziflu peak week visualizations, you can click  [here](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v2/EW43.html)  [![Demo](https://img.shields.io/badge/2017--2018-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v2/EW43.html) to access a fully working demo of the 2017-2018 flu season. Or click  [here](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts-v2/EW42.html)  [![Demo 2](https://img.shields.io/badge/2018--2019-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts-v2/EW42.html) if you’re curious to see early season forecasts for part of the 2018–2019 season.*
+If you would like to explore Viziflu, you can access 
+* early season U.S. peak week forecasts⁑ for the current (2019–20) flu season [here](https://bnext-iqt.github.io/Viziflu/docs/2019-2020-Forecasts-v4/EW42.html)  [![Demo](https://img.shields.io/badge/2019--20_forecast_results_timeline-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2019-2020-Forecasts-v4/EW42.html)
+* early season U.S. peak week forecasts* for part of the 2018–19 flu season [here](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts-v4/EW42.html)  [![Demo](https://img.shields.io/badge/2018--19_forecast_results_timeline-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts-v4/EW42.html)
+  * forecast skill scores for the 2018–19 flu season [here](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts-v5-USPkWkSkillScore/index.html)  [![Demo](https://img.shields.io/badge/2018--19_forecast_skill_small_multiples-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2018-2019-Forecasts-v5-USPkWkSkillScore/index.html)
+* full season early season U.S. peak week forecasts from the 2017-18 flu season [here](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v4/EW43.html)  [![Demo](https://img.shields.io/badge/2017--18_forecast_results_timeline-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v4/EW43.html)
+  * forecast skill scores for the the 2017-18 flu season [here](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v5-USPkWkSkillScore/index.html)  [![Demo](https://img.shields.io/badge/2017--18_forecast_skill_small_multiples-dimgrey.svg?logo=Javascript&style=plastic)](https://bnext-iqt.github.io/Viziflu/docs/2017-2018-Forecasts-v5-USPkWkSkillScore/index.html)
 
-```* Preliminary results only.```
+
+<sub>* Preliminary results only. ⁑ Note that skill scores for the 2019-20 flu season are not currently available.</sub>
 
 Description and Generalizability
 -----------
