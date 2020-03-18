@@ -34,7 +34,7 @@ function vizifluChart() {
   var drawTitle = 1;
 
   // year ticks to be emphasized or not (default: yes)
-  var emphasizeYearTicks = 1;
+  var emphasizeYearTicks = 0;
 
   // define chart pagination
   // max. no. of datasets that is displayed, 0: all (default: all)
