@@ -1,299 +1,273 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>U.S. Peak Week Skill Scores, 2018-19</title>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" type='text/css'>
-	    <script src="https://use.fontawesome.com/8321cacbf6.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-        body {font-family: 'IBM Plex Sans', sans-serif;}
-.ribbon {
-  position: absolute;
-  right: -5px; top: -5px;
-  z-index: 1;
-  overflow: hidden;
-  width: 75px; height: 75px;
-  text-align: right;
-}
-.ribbon span {
-  font-size: 10px;
-  font-weight: bold;
-  color: #FFF;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 20px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  width: 100px;
-  display: block;
-  background: #79A70A;
-  background: linear-gradient(#F79E05 0%, #8F5408 100%);
-  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 19px; right: -21px;
-}
-.ribbon span::before {
-  content: "";
-  position: absolute; left: 0px; top: 100%;
-  z-index: -1;
-  border-left: 3px solid #8F5408;
-  border-right: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid #8F5408;
-}
-.ribbon span::after {
-  content: "";
-  position: absolute; right: 0px; top: 100%;
-  z-index: -1;
-  border-left: 3px solid transparent;
-  border-right: 3px solid #8F5408;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid #8F5408;
-}
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>U.S. Peak Week Skill Scores, 2018-19</title>
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" type="text/css" />
+        <script src="https://use.fontawesome.com/8321cacbf6.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+        <style>
+            body {
+                font-family: "IBM Plex Sans", sans-serif;
+            }
+            .ribbon {
+                position: absolute;
+                right: -5px;
+                top: -5px;
+                z-index: 1;
+                overflow: hidden;
+                width: 75px;
+                height: 75px;
+                text-align: right;
+            }
+            .ribbon span {
+                font-size: 10px;
+                font-weight: bold;
+                color: #fff;
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 20px;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                width: 100px;
+                display: block;
+                background: #79a70a;
+                background: linear-gradient(#f79e05 0%, #8f5408 100%);
+                box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+                position: absolute;
+                top: 19px;
+                right: -21px;
+            }
+            .ribbon span::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 100%;
+                z-index: -1;
+                border-left: 3px solid #8f5408;
+                border-right: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-top: 3px solid #8f5408;
+            }
+            .ribbon span::after {
+                content: "";
+                position: absolute;
+                right: 0px;
+                top: 100%;
+                z-index: -1;
+                border-left: 3px solid transparent;
+                border-right: 3px solid #8f5408;
+                border-bottom: 3px solid transparent;
+                border-top: 3px solid #8f5408;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ribbon"><span>2018-19</span></div>
+        <div>
+            <br />
+            <h1>&nbsp;<i class="fa fa-bullseye"></i>&nbsp;How well did U.S. peak week forecasts perform in 2018-19?</h1>
+            <p style="margin: 0 auto; width: 95%; padding: 10px;">
+                The charts below show <b style="color: red;">forecast skill scores</b> for each model submitted to the CDC FluSight Challenge, focusing only on forecasts of U.S. peak week. Forecast skill is based on both accuracy (log
+                scores) and confidence (distributional sharpness) over the entire season. It varies as modeling teams update their forecasts each week.
+            </p>
+        </div>
+        <div>
+            <script>
+                var smallMultipleSize = [300, 300];
 
-    </style>
-</head>
-<body>
-	   <div class="ribbon"><span>2018-19</span></div>
-    <div>
-			<br>
-			<h1>&nbsp;<i class="fa fa-bullseye"></i>&nbsp;How well did U.S. peak week forecasts perform in 2018-19?</h1>
-      <p style="margin: 0 auto; width: 95%;padding: 10px">The charts below show <b style="color:red">forecast skill scores</b> for each model submitted to the CDC FluSight Challenge, focusing only on forecasts of U.S. peak week. Forecast skill is based on both accuracy (log scores) and confidence (distributional sharpness) over the entire season. It varies as modeling teams update their forecasts each week.</p>
-    </div>
-    <div>
-			<script>
-				var smallMultipleSize = [300, 300];
+                var margin = { top: 30, right: 10, bottom: 30, left: 40 },
+                    width = +smallMultipleSize[0] - margin.left - margin.right,
+                    height = +smallMultipleSize[1] - margin.top - margin.bottom;
 
-var margin = { top: 30, right: 10, bottom: 30, left: 40 },
-  width = +smallMultipleSize[0] - margin.left - margin.right,
-  height = +smallMultipleSize[1] - margin.top - margin.bottom;
+                var unity = [1];
 
+                // parse day, abbreviated month name, year without century
+                var parseTime = d3.timeParse("%d-%b-%y");
 
-var unity = [1];
+                var x = d3.scaleTime().domain([0, 1]).rangeRound([0, width]);
 
-// parse day, abbreviated month name, year without century
-var parseTime = d3.timeParse("%d-%b-%y");
+                var y = d3.scaleLinear().rangeRound([height, 0]);
 
-var x = d3
-  .scaleTime()
-  .domain([0, 1])
-  .rangeRound([0, width]);
+                // areas are defined by two bounding lines - here the x value is the same for both
+                // the y values, y0 and y1 differ
+                // see https://github.com/d3/d3-shape#areas for API reference
+                var area = d3
+                    .area()
+                    .x(function (d) {
+                        return x(d.Date);
+                    })
+                    .y1(function (d) {
+                        return y(d.Skillscore);
+                    })
+                    // bottom coordinate of area will always be zero
+                    .y0(y(0));
 
-var y = d3.scaleLinear().rangeRound([height, 0]);
+                // Add a line to the top of the area
+                var line = d3
+                    .line()
+                    .x(function (d) {
+                        return x(d.Date);
+                    })
+                    .y(function (d) {
+                        return y(d.Skillscore);
+                    });
 
-// areas are defined by two bounding lines - here the x value is the same for both
-// the y values, y0 and y1 differ
-// see https://github.com/d3/d3-shape#areas for API reference
-var area = d3
-  .area()
-  .x(function(d) {
-    return x(d.Date);
-  })
-  .y1(function(d) {
-    return y(d.Skillscore);
-  })
-  // bottom coordinate of area will always be zero
-  .y0(y(0));
+                var series = [
+                    { name: "GH_B", file: "GH_B_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "PSI-s", file: "PSI-s_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "LANL-DBMplus", file: "LANL-DBMplus_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "PSI-e", file: "PSI-e_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "KoT", file: "KoT_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "KoT_dev", file: "KoT_dev_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "BioFire-FLI", file: "BioFire-FLI_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "FluSight_Network", file: "FluSight_Network_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "LANL-Dante", file: "LANL-Dante_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "TeamAnonymous", file: "TeamAnonymous_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "Tulane", file: "Tulane_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "PPFST", file: "PPFST_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "PPFST2", file: "PPFST2_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "UMNSpl", file: "UMNSpl_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "Unwght_Avg", file: "Unwght_Avg_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "ISU", file: "ISU_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "Protea-Cheetah", file: "Protea-Cheetah_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "Protea-Springbok", file: "Protea-Springbok_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "Delphi-Stat", file: "Delphi-Stat_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "CU_Network", file: "CU_Network_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "CU_Puffins", file: "CU_Puffins_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "Delphi-Epicast2", file: "Delphi-Epicast2_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "Yale", file: "Yale_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "Hist_Avg", file: "Hist_Avg_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "CU_SEL", file: "CU_SEL_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "CEID", file: "CEID_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "CU_Vixen", file: "CU_Vixen_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "KBSI", file: "KBSI_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "Delphi-Epicast", file: "Delphi-Epicast_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "FluX", file: "FluX_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "UA_EpiCos", file: "UA_EpiCos_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "KPWHRI", file: "KPWHRI_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "EpiDeep", file: "EpiDeep_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "FluOutlook-Mech", file: "FluOutlook-Mech_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "FluOutlook-MechArgo", file: "FluOutlook-MechArgo_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "FluOutlook-MechAug", file: "FluOutlook-MechAug_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "UA_EpiFlu", file: "UA_EpiFlu_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "GH_A", file: "GH_A_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "UniMelb", file: "UniMelb_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                    { name: "ARGO", file: "ARGO_2018-19_natl_pkwk.csv", color: "#4bb0d1" },
+                ];
 
-// Add a line to the top of the area
-var line = d3
-  .line()
-  .x(function(d) {
-    return x(d.Date);
-  })
-  .y(function(d) {
-    return y(d.Skillscore);
-  });
+                // queue for all series
+                var queue = d3.queue();
 
-var series = [
-{name: "GH_B", file: "GH_B_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "PSI-s", file: "PSI-s_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "LANL-DBMplus", file: "LANL-DBMplus_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "PSI-e", file: "PSI-e_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "KoT", file: "KoT_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "KoT_dev", file: "KoT_dev_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "BioFire-FLI", file: "BioFire-FLI_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "FluSight_Network", file: "FluSight_Network_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "LANL-Dante", file: "LANL-Dante_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "TeamAnonymous", file: "TeamAnonymous_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "Tulane", file: "Tulane_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "PPFST", file: "PPFST_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "PPFST2", file: "PPFST2_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "UMNSpl", file: "UMNSpl_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "Unwght_Avg", file: "Unwght_Avg_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "ISU", file: "ISU_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "Protea-Cheetah", file: "Protea-Cheetah_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "Protea-Springbok", file: "Protea-Springbok_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "Delphi-Stat", file: "Delphi-Stat_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "CU_Network", file: "CU_Network_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "CU_Puffins", file: "CU_Puffins_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "Delphi-Epicast2", file: "Delphi-Epicast2_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "Yale", file: "Yale_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "Hist_Avg", file: "Hist_Avg_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "CU_SEL", file: "CU_SEL_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "CEID", file: "CEID_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "CU_Vixen", file: "CU_Vixen_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "KBSI", file: "KBSI_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "Delphi-Epicast", file: "Delphi-Epicast_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "FluX", file: "FluX_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "UA_EpiCos", file: "UA_EpiCos_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "KPWHRI", file: "KPWHRI_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "EpiDeep", file: "EpiDeep_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "FluOutlook-Mech", file: "FluOutlook-Mech_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "FluOutlook-MechArgo", file: "FluOutlook-MechArgo_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "FluOutlook-MechAug", file: "FluOutlook-MechAug_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "UA_EpiFlu", file: "UA_EpiFlu_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "GH_A", file: "GH_A_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "UniMelb", file: "UniMelb_2018-19_natl_pkwk.csv", color: "#4bb0d1"},
-{name: "ARGO", file: "ARGO_2018-19_natl_pkwk.csv", color: "#4bb0d1"}
-];
+                for (var s in series) {
+                    queue.defer(d3.csv, series[s].file);
+                }
+                queue.awaitAll(ready);
 
-// queue for all series
-var queue = d3.queue();
+                function ready(error, results) {
+                    for (var s in series) {
+                        drawChart(series[s].name, results[s]);
+                    }
+                }
 
-for (var s in series) {
-  queue.defer(d3.csv, series[s].file);
-}
-queue.awaitAll(ready);
+                function drawChart(name, results) {
+                    var data = results.map(function (d) {
+                        d.Date = parseTime(d.Date);
+                        d.Skillscore = +d.Skillscore;
+                        return d;
+                    });
 
-function ready(error, results) {
-  for (var s in series) {
-    drawChart(series[s].name, results[s]);
-  }
-}
+                    x.domain(
+                        d3.extent(data, function (d) {
+                            return d.Date;
+                        })
+                    );
+                    y.domain([0, d3.max(unity)]);
 
-function drawChart(name, results) {
-  var data = results.map(function(d) {
-    d.Date = parseTime(d.Date);
-    d.Skillscore = +d.Skillscore;
-    return d;
-  });
+                    var svg = d3
+                        .select("body")
+                        .append("svg")
+                        .attr("width", smallMultipleSize[0])
+                        .attr("height", smallMultipleSize[1])
+                        .append("g")
+                        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  x.domain(
-    d3.extent(data, function(d) {
-      return d.Date;
-    })
-  );
-  y.domain([
-    0,
-    d3.max(unity)
-  ]);
+                    svg.append("path")
+                        .datum(data)
+                        .attr("fill", function () {
+                            for (var i in series) {
+                                if (series[i].name === name) {
+                                    return series[i].color;
+                                }
+                            }
+                        })
+                        .attr("d", area);
 
-  var svg = d3
-    .select("body")
-    .append("svg")
-    .attr("width", smallMultipleSize[0])
-    .attr("height", smallMultipleSize[1])
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                    // add line to top of area
+                    svg.append("path").datum(data).attr("fill", "none").attr("stroke", "#4bb0d1").attr("d", line);
 
-  svg
-    .append("path")
-    .datum(data)
-    .attr("fill", function() {
-      for (var i in series) {
-        if (series[i].name === name) {
-          return series[i].color;
-        }
-      }
-    })
-    .attr("d", area);
+                    // add line to the right of the area
+                    svg.append("line").attr("x1", x.range()[1]).attr("y1", 0).attr("x2", x.range()[1]).attr("y2", y.range()[0]).attr("fill", "none").attr("stroke", "#000");
 
-  // add line to top of area
-  svg
-    .append("path")
-    .datum(data)
-    .attr("fill", "none")
-    .attr("stroke", "#4bb0d1")
-    .attr("d", line);
+                    // add observed peak week
+                    svg.append("line")
+                        .attr("x1", x.range()[1] / 1.55)
+                        .attr("y1", 0)
+                        .attr("x2", x.range()[1] / 1.55)
+                        .attr("y2", y.range()[0])
+                        .attr("fill", "none")
+                        .attr("stroke", "#000");
 
-  // add line to the right of the area
-  svg
-    .append("line")
-    .attr("x1", x.range()[1])
-    .attr("y1", 0)
-    .attr("x2", x.range()[1])
-    .attr("y2", y.range()[0])
-    .attr("fill", "none")
-    .attr("stroke", "#000");
+                    // add Hist-Avg. dotted line for reference
+                    svg.append("line")
+                        .attr("x1", 0)
+                        .attr("y1", 0.658456106 * y.range()[0])
+                        .attr("x2", x.range()[1])
+                        .attr("y2", 0.658456106 * y.range()[0])
+                        .attr("fill", "none")
+                        .attr("stroke", "#000")
+                        .style("stroke-dasharray", "3, 3");
 
-		    // add observed peak week
-    svg.append("line")
-      .attr("x1", (x.range()[1]/1.55))
-      .attr("y1", 0)
-      .attr("x2", (x.range()[1]/1.55))
-      .attr("y2", (y.range()[0]))
-      .attr("fill", "none")
-      .attr("stroke", "#000")
+                    svg.append("g")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(d3.axisBottom(x).ticks(4))
+                        .style("font-family", "IBM Plex Sans")
+                        .style("font-size", "8.75");
 
-  // add Hist-Avg. dotted line for reference
-  svg
-    .append("line")
-    .attr("x1", 0)
-    .attr("y1", 0.658456106 * y.range()[0])
-    .attr("x2", x.range()[1])
-    .attr("y2", 0.658456106 * y.range()[0])
-    .attr("fill", "none")
-    .attr("stroke", "#000")
-    .style("stroke-dasharray", "3, 3");
+                    svg.append("g")
+                        .call(d3.axisLeft(y).tickSizeOuter(0).ticks(5))
+                        .style("font-family", "IBM Plex Sans")
+                        .style("font-size", "10")
+                        .append("text")
+                        .attr("fill", "#000")
+                        .attr("y", 6)
+                        .attr("x", 0)
+                        .attr("dx", "0.71em")
+                        .attr("text-anchor", "start")
+                        .text("Skill Score")
+                        .append("svg:tspan")
+                        .attr("x", 7)
+                        .attr("dy", 12)
+                        .text(name + " Model")
+                        .append("svg:tspan")
+                        .attr("x", 7)
+                        .attr("dy", 153)
+                        .text("Hist. Avg.")
+                        .style("font-family", "IBM Plex Sans")
+                        .style("font-size", "10");
 
-  svg
-    .append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x).ticks(4))
-	  .style("font-family", "IBM Plex Sans")
-    .style("font-size", "8.75");
+                    svg.append("text").attr("id", "title").attr("font-size", 10).attr("style", "fill: #000").append("svg:tspan").attr("x", 85).attr("y", 270).text("Forecast Date");
 
-  svg
-    .append("g")
-    .call(
-      d3
-        .axisLeft(y)
-        .tickSizeOuter(0)
-        .ticks(5)
-    )
-		.style("font-family", "IBM Plex Sans")
-    .style("font-size", "10")
-    .append("text")
-    .attr("fill", "#000")
-    .attr("y", 6)
-    .attr("x", 0)
-    .attr("dx", "0.71em")
-    .attr("text-anchor", "start")
-    .text("Skill Score")
-		.append('svg:tspan')
-    .attr('x', 7)
-    .attr('dy', 12)
-    .text(name +" Model")
-		.append('svg:tspan')
-    .attr('x', 7)
-    .attr('dy', 153)
-    .text("Hist. Avg.")
-		.style("font-family", "IBM Plex Sans")
-    .style("font-size", "10")
-
-svg
-	.append("text")
-  .attr("id", "title")
-  .attr("font-size", 10)
-  .attr("style", "fill: #000")
-	.append('svg:tspan')
-  .attr("x", 85)
-  .attr("y", 270)
-	.text("Forecast Date")
-
-svg.append("text")
-  .attr("x", (x.range()[1]/1.46))
-  .attr("y", 60)
-  .attr("id", "title")
-  .attr("font-size", 10)
-  .attr("style", "fill: #000; writing-mode: tb; glyph-orientation-vertical: 0")
-  .text("Observed Peak Week, U.S.");
-
-}
-			</script>
-    </div>
-</body>
+                    svg.append("text")
+                        .attr("x", x.range()[1] / 1.46)
+                        .attr("y", 60)
+                        .attr("id", "title")
+                        .attr("font-size", 10)
+                        .attr("style", "fill: #000; writing-mode: tb; glyph-orientation-vertical: 0")
+                        .text("Observed Peak Week, U.S.");
+                }
+            </script>
+        </div>
+    </body>
 </html>
