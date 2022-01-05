@@ -38,7 +38,7 @@ Multiple outside research teams have developed different models that provide flu
 
 Copyright
 -------
-Copyright :copyright: 2018-2020 [IQT Labs LLC](https://www.iqt.org/labs/), a wholly owned research venture of [In-Q-Tel, Inc.](https://www.iqt.org)
+Copyright :copyright: 2018-2022 [IQT Labs LLC](https://www.iqt.org/labs/), a wholly owned research venture of [In-Q-Tel, Inc.](https://www.iqt.org)
 
 :scroll: License
 -------
